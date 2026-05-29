@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Concerns\IsPublishable;
 use App\Enums\EventStatus;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -37,7 +38,16 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class Event extends Model implements HasMedia
 {
-    use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes;
+    use HasFactory, HasSlug, InteractsWithMedia, IsPublishable, SoftDeletes;
+
+    public function publishStatus () {
+        return [
+            EventStatus::Open,
+            EventStatus::Scheduled,
+            EventStatus::Completed,
+            EventStatus::Closed
+        ];
+    }
 
     protected function casts(): array
     {
@@ -84,5 +94,13 @@ class Event extends Model implements HasMedia
     public function registrations(): HasMany
     {
         return $this->hasMany(EventRegistration::class);
+    }
+
+    function getDateAttribute(){
+        return $this->start_at->format('jS F');
+    }
+
+    function getImageAttribute() {
+        return $this->getFirstMediaUrl('featured_image');
     }
 }

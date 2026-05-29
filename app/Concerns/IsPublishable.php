@@ -19,11 +19,7 @@ trait IsPublishable {
         }
 
         if($this->hasAttribute('status')) {
-            $query->whereIn('status', [
-                PostStatus::Published, 
-                CaseStudyStatus::Completed, 
-                CaseStudyStatus::Active
-            ]);
+            $query->whereIn('status', $this->publishStatus());
         }
 
         if($this->hasAttribute('published_at')) {

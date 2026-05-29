@@ -37,6 +37,12 @@ class Post extends Model implements HasMedia
 
     protected $with = ['category', 'author'];
 
+    public function publishStatus () {
+        return [
+            PostStatus::Published
+        ];
+    }
+
     protected function casts(): array {
         return [
             'status' => PostStatus::class,

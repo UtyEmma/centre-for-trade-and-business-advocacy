@@ -33,6 +33,13 @@ class CaseStudy extends Model implements HasMedia
 {
     use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes, IsPublishable;
 
+    public function publishStatus() {
+        return  [
+            CaseStudyStatus::Completed, 
+            CaseStudyStatus::Active
+        ];
+    }
+
     protected function casts(): array
     {
         return [
