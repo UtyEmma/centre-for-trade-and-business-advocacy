@@ -74,6 +74,7 @@ final class PostForm
                     ])
                     ->columns(1)
                     ->columnSpan(1),
+                CmsForm::seo(),
             ]);
     }
 }

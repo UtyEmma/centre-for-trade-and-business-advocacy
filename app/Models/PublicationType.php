@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use App\Support\Seo;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -19,7 +22,7 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class PublicationType extends Model
 {
-    use HasFactory, HasSlug;
+    use HasFactory, HasSEO, HasSlug;
 
     protected function casts(): array
     {
@@ -41,7 +44,13 @@ class PublicationType extends Model
         return 'slug';
     }
 
-    function scopeActive(Builder $query) {
+    public function getDynamicSEOData(): SEOData
+    {
+        return Seo::publicationType($this);
+    }
+
+    public function scopeActive(Builder $query)
+    {
         $query->where('is_active', true);
     }
 

@@ -4,12 +4,16 @@ namespace App\Models;
 
 use App\Concerns\IsSortable;
 use App\Enums\JobPostingStatus;
+use App\Support\Seo;
+use Database\Factories\JobPostingFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -36,8 +40,8 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class JobPosting extends Model
 {
-    /** @use HasFactory<\Database\Factories\JobPostingFactory> */
-    use HasFactory, HasSlug, SoftDeletes, IsSortable;
+    /** @use HasFactory<JobPostingFactory> */
+    use HasFactory, HasSEO, HasSlug, IsSortable, SoftDeletes;
 
     protected function casts(): array
     {
@@ -60,6 +64,11 @@ class JobPosting extends Model
     public function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    public function getDynamicSEOData(): SEOData
+    {
+        return Seo::jobPosting($this);
     }
 
     public function scopeOrdered(Builder $query): Builder

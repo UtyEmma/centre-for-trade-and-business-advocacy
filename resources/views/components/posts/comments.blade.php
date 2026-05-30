@@ -3,8 +3,8 @@
 use App\Enums\CommentStatus;
 use App\Models\Comment;
 use App\Models\Post;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Validation\ValidationException;
@@ -49,7 +49,7 @@ new class extends Component
         return $this->post->comments()
             ->with([
                 'user',
-                'replies' => function (Builder $query): void {
+                'replies' => function (HasMany $query): void {
                     $query
                         ->where('status', CommentStatus::Approved->value)
                         ->oldest()

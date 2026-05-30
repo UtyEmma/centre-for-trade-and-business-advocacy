@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2925cf050f96c65558cd0448ec1b1d5e",
+    "content-hash": "2d1834a9f67e37e7110cd05fca5f141f",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -6264,16 +6264,16 @@
         },
         {
             "name": "spatie/laravel-settings",
-            "version": "3.8.1",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-settings.git",
-                "reference": "1cc000ea2a0431cb25afbb6dc6b593452b2644ad"
+                "reference": "6c1351cf57c4ae96cd2313ae395c6d367dfeee01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-settings/zipball/1cc000ea2a0431cb25afbb6dc6b593452b2644ad",
-                "reference": "1cc000ea2a0431cb25afbb6dc6b593452b2644ad",
+                "url": "https://api.github.com/repos/spatie/laravel-settings/zipball/6c1351cf57c4ae96cd2313ae395c6d367dfeee01",
+                "reference": "6c1351cf57c4ae96cd2313ae395c6d367dfeee01",
                 "shasum": ""
             },
             "require": {
@@ -6333,7 +6333,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-settings/issues",
-                "source": "https://github.com/spatie/laravel-settings/tree/3.8.1"
+                "source": "https://github.com/spatie/laravel-settings/tree/3.9.0"
             },
             "funding": [
                 {
@@ -6345,7 +6345,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-22T09:44:08+00:00"
+            "time": "2026-05-26T13:18:06+00:00"
         },
         {
             "name": "spatie/laravel-sluggable",

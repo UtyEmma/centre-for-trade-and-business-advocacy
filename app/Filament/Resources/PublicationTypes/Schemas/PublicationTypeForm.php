@@ -38,6 +38,7 @@ final class PublicationTypeForm
                     ])
                     ->columns(1)
                     ->columnSpan(1),
+                CmsForm::seo(),
             ]);
     }
 }

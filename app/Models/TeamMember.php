@@ -4,11 +4,14 @@ namespace App\Models;
 
 use App\Concerns\IsPublishable;
 use App\Concerns\IsSortable;
+use App\Support\Seo;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
@@ -27,7 +30,7 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class TeamMember extends Model implements HasMedia
 {
-    use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes, IsPublishable, IsSortable;
+    use HasFactory, HasSEO, HasSlug, InteractsWithMedia, IsPublishable, IsSortable, SoftDeletes;
 
     protected $appends = ['image'];
 
@@ -51,6 +54,11 @@ class TeamMember extends Model implements HasMedia
         return 'slug';
     }
 
+    public function getDynamicSEOData(): SEOData
+    {
+        return Seo::teamMember($this);
+    }
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('profile_photo')->singleFile();
@@ -61,7 +69,8 @@ class TeamMember extends Model implements HasMedia
         return $this->belongsTo(TeamCategory::class, 'team_category_id');
     }
 
-    function getImageAttribute(){
+    public function getImageAttribute()
+    {
         return $this->getFirstMediaUrl('profile_photo');
     }
 }

@@ -59,6 +59,7 @@ final class CaseStudyForm
                     ])
                     ->columns(1)
                     ->columnSpan(1),
+                CmsForm::seo(),
             ]);
     }
 }

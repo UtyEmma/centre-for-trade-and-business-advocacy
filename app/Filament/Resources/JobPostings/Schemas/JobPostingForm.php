@@ -99,6 +99,7 @@ class JobPostingForm
                     ])
                     ->columns(1)
                     ->columnSpan(1),
+                CmsForm::seo(),
             ]);
     }
 }

@@ -94,6 +94,7 @@ final class EventForm
                     ])
                     ->columns(1)
                     ->columnSpan(1),
+                CmsForm::seo(),
             ]);
     }
 }

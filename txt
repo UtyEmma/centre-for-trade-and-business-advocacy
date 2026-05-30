@@ -1,0 +1,7 @@
+Settings
+
+- Header and footer scripts 
+- site information settings
+- SEO setup and configuration
+- contact settings & social media
+- 

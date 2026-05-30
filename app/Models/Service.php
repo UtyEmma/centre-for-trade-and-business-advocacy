@@ -4,11 +4,14 @@ namespace App\Models;
 
 use App\Concerns\IsFeaturable;
 use App\Concerns\IsPublishable;
+use App\Support\Seo;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
@@ -24,10 +27,12 @@ use Spatie\Sluggable\SlugOptions;
     'is_featured',
     'is_published',
 ])]
-class Service extends Model implements HasMedia {
-    use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes, IsPublishable, IsFeaturable;
+class Service extends Model implements HasMedia
+{
+    use HasFactory, HasSEO, HasSlug, InteractsWithMedia, IsFeaturable, IsPublishable, SoftDeletes;
 
-    protected function casts(): array {
+    protected function casts(): array
+    {
         return [
             'sort_order' => 'integer',
             'is_featured' => 'boolean',
@@ -35,14 +40,21 @@ class Service extends Model implements HasMedia {
         ];
     }
 
-    public function getSlugOptions(): SlugOptions {
+    public function getSlugOptions(): SlugOptions
+    {
         return SlugOptions::create()
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
 
-    public function getRouteKeyName(): string {
+    public function getRouteKeyName(): string
+    {
         return 'slug';
+    }
+
+    public function getDynamicSEOData(): SEOData
+    {
+        return Seo::service($this);
     }
 
     public function registerMediaCollections(): void
@@ -63,5 +75,9 @@ class Service extends Model implements HasMedia {
     public function events(): HasMany
     {
         return $this->hasMany(Event::class);
+    }
+
+    function getImageAttribute(){
+        return $this->getFirstMediaUrl('image');
     }
 }

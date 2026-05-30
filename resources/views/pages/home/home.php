@@ -4,6 +4,7 @@ use App\Http\Resources\Posts\PostResource;
 use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
+use App\Models\TeamMember;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 
@@ -23,6 +24,11 @@ new class extends Component {
     #[Computed]
     function faqs() {
         return Faq::all();
+    }
+
+    #[Computed]
+    function teamMembers() {
+        return TeamMember::limit(4)->get();
     }
 
 };

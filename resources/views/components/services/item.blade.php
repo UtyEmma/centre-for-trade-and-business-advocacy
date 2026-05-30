@@ -9,7 +9,7 @@
             <a class="tp-line-anim" href="{{ route('services.show', $service) }}">{{ $service->title }}</a>
         </h3>
 
-        <p class="line-clamp-3! text-gray-600">{{$service->summary}}</>
+        <p class="line-clamp-3! text-gray-600">{{$service->summary}}</p>
     </div>
     <div class="tp-fi-service-item-btn">
         <a href="{{ route('services.show', $service) }}">

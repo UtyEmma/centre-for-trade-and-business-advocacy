@@ -54,6 +54,7 @@ final class TeamMemberForm
                     ])
                     ->columns(1)
                     ->columnSpan(1),
+                CmsForm::seo(),
             ]);
     }
 }

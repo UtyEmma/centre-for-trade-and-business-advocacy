@@ -1,7 +1,38 @@
+@props([
+    'image' => asset('assets/img/accounting/hero/thumb-1.jpg') ,
+    'badge' => 'Independent policy voice',
+    'headline' => 'Promoting equitable markets for sustainable development',
+    'description' => 'The Centre for Trade and Business Environment Advocacy works to strengthen fair markets, effective regulation, and inclusive economic governance in Nigeria and across Africa.',
+    'buttons' => [
+        [
+            'label' => 'Explore Our Work',
+            'url' => '/what-we-do',
+            'type' => 'primary',
+        ],
+        [
+            'label' => 'Learn More',
+            'url' => '/who-we-are',
+            'type' => 'secondary',
+        ],
+    ],
+    // 'stats' => [
+    //     [
+    //         'value' => '2018',
+    //         'label' => 'Established',
+    //         'description' => 'Independent public-interest organisation',
+    //     ],
+    //     [
+    //         'value' => 'Africa',
+    //         'label' => 'Outlook',
+    //         'description' => 'Rooted in Nigeria, engaged across the continent',
+    //     ],
+    // ],
+])
+
 <div class="swiper-slide">
     <div class="tp-at-hero-item p-relative pt-170 pb-90">
         <div class="tp-at-hero-item-thumb">
-            <img src="assets/img/accounting/hero/thumb-1.jpg" alt="hero">
+            <img src="{{ $image }}" alt="{{ $headline }}">
         </div>
         <div class="tp-cn-hero-bg tp-fade-anim" data-delay=".4" data-fade-from="left">
             <img src="{{ asset('assets/img/consulting/hero/bg-shape.png') }}" alt="">
@@ -10,33 +41,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tp-at-hero-wrapper z-index-1">
-                        <div class="pb-5">
+                        <div class="pb-5 col-md-8">
                             <div class="tp-cn-hero-top d-flex mb-20 tp-fade-anim">
-                                <span class="tp-cn-hero-sub">Top consulting farm</span>
+                                <span class="tp-cn-hero-sub">{{ $badge }}</span>
                                 <div class="tp-cn-hero-star">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                    <path d="M6.13805 0.552787C6.37753 -0.184262 7.42026 -0.184263 7.65974 0.552786L8.73991 3.87721C8.84701 4.20682 9.15417 4.42999 9.50075 4.42999H12.9963C13.7712 4.42999 14.0935 5.42169 13.4665 5.87721L10.6386 7.93181C10.3582 8.13552 10.2408 8.49662 10.3479 8.82624L11.4281 12.1507C11.6676 12.8877 10.824 13.5006 10.197 13.0451L7.36912 10.9905C7.08873 10.7868 6.70906 10.7868 6.42867 10.9905L3.60075 13.0451C2.97378 13.5006 2.13019 12.8877 2.36967 12.1507L3.44984 8.82624C3.55694 8.49662 3.43961 8.13553 3.15922 7.93181L0.331306 5.87721C-0.295666 5.42169 0.0265543 4.42999 0.801533 4.42999H4.29703C4.64361 4.42999 4.95078 4.20682 5.05788 3.87721L6.13805 0.552787Z" fill="#C1F43D"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                    <path d="M6.13805 0.552787C6.37753 -0.184262 7.42026 -0.184263 7.65974 0.552786L8.73991 3.87721C8.84701 4.20682 9.15417 4.42999 9.50075 4.42999H12.9963C13.7712 4.42999 14.0935 5.42169 13.4665 5.87721L10.6386 7.93181C10.3582 8.13552 10.2408 8.49662 10.3479 8.82624L11.4281 12.1507C11.6676 12.8877 10.824 13.5006 10.197 13.0451L7.36912 10.9905C7.08873 10.7868 6.70906 10.7868 6.42867 10.9905L3.60075 13.0451C2.97378 13.5006 2.13019 12.8877 2.36967 12.1507L3.44984 8.82624C3.55694 8.49662 3.43961 8.13553 3.15922 7.93181L0.331306 5.87721C-0.295666 5.42169 0.0265543 4.42999 0.801533 4.42999H4.29703C4.64361 4.42999 4.95078 4.20682 5.05788 3.87721L6.13805 0.552787Z" fill="#C1F43D"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                    <path d="M6.13805 0.552787C6.37753 -0.184262 7.42026 -0.184263 7.65974 0.552786L8.73991 3.87721C8.84701 4.20682 9.15417 4.42999 9.50075 4.42999H12.9963C13.7712 4.42999 14.0935 5.42169 13.4665 5.87721L10.6386 7.93181C10.3582 8.13552 10.2408 8.49662 10.3479 8.82624L11.4281 12.1507C11.6676 12.8877 10.824 13.5006 10.197 13.0451L7.36912 10.9905C7.08873 10.7868 6.70906 10.7868 6.42867 10.9905L3.60075 13.0451C2.97378 13.5006 2.13019 12.8877 2.36967 12.1507L3.44984 8.82624C3.55694 8.49662 3.43961 8.13553 3.15922 7.93181L0.331306 5.87721C-0.295666 5.42169 0.0265543 4.42999 0.801533 4.42999H4.29703C4.64361 4.42999 4.95078 4.20682 5.05788 3.87721L6.13805 0.552787Z" fill="#C1F43D"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                    <path d="M6.13805 0.552787C6.37753 -0.184262 7.42026 -0.184263 7.65974 0.552786L8.73991 3.87721C8.84701 4.20682 9.15417 4.42999 9.50075 4.42999H12.9963C13.7712 4.42999 14.0935 5.42169 13.4665 5.87721L10.6386 7.93181C10.3582 8.13552 10.2408 8.49662 10.3479 8.82624L11.4281 12.1507C11.6676 12.8877 10.824 13.5006 10.197 13.0451L7.36912 10.9905C7.08873 10.7868 6.70906 10.7868 6.42867 10.9905L3.60075 13.0451C2.97378 13.5006 2.13019 12.8877 2.36967 12.1507L3.44984 8.82624C3.55694 8.49662 3.43961 8.13553 3.15922 7.93181L0.331306 5.87721C-0.295666 5.42169 0.0265543 4.42999 0.801533 4.42999H4.29703C4.64361 4.42999 4.95078 4.20682 5.05788 3.87721L6.13805 0.552787Z" fill="#C1F43D"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                    <path d="M6.13805 0.552787C6.37753 -0.184262 7.42026 -0.184263 7.65974 0.552786L8.73991 3.87721C8.84701 4.20682 9.15417 4.42999 9.50075 4.42999H12.9963C13.7712 4.42999 14.0935 5.42169 13.4665 5.87721L10.6386 7.93181C10.3582 8.13552 10.2408 8.49662 10.3479 8.82624L11.4281 12.1507C11.6676 12.8877 10.824 13.5006 10.197 13.0451L7.36912 10.9905C7.08873 10.7868 6.70906 10.7868 6.42867 10.9905L3.60075 13.0451C2.97378 13.5006 2.13019 12.8877 2.36967 12.1507L3.44984 8.82624C3.55694 8.49662 3.43961 8.13553 3.15922 7.93181L0.331306 5.87721C-0.295666 5.42169 0.0265543 4.42999 0.801533 4.42999H4.29703C4.64361 4.42999 4.95078 4.20682 5.05788 3.87721L6.13805 0.552787Z" fill="#C1F43D"/>
-                                    </svg>
+                                    
                                 </div>
                             </div>
                             
-                            <h3 class="tp-cn-hero-title mb-35" data-text-split data-letters-fade-in>End to end
-                                outsourced <br>
-                                Finance, accounting, Tax <br>
-                                & Payroll support</h3>
-                            <div class="tp-cn-hero-content d-flex justify-content-between align-items-center tp-fade-anim"
+                            <h3 class="tp-cn-hero-title mb-35" data-text-split data-letters-fade-in>{!! $headline !!}</h3>
+
+                            <div class="tp-cn-hero-content col-md-10 d-flex justify-content-between align-items-center tp-fade-anim"
                                 data-delay=".6">
                                 <div class="tp-fi-hero-sub">
                                     <span>
@@ -49,21 +64,19 @@
                                         </svg>
                                     </span>
                                     <p>
-                                        Unlock the full potential of your business with Consora where <br> strategic
-                                        expertise meets innovative solutions.
+                                        {{$description}}
                                     </p>
                                 </div>
                             </div>
                             <div class="tp-fi-hero-bottom mt-40">
-                                <div class="tp-fi-hero-btn mb-20 tp-fade-anim" data-delay=".5">
-                                    <a href="contact.html" class="tp-btn-event">
-                                        <div class="button-text">Schedule a free consultation</div>
-                                        <div class="button-icon-wrapper">
-                                            <img src="assets/img/finance/hero/btn-arrow.svg" loading="lazy" width="16"
-                                            height="16" alt="" class="button-image">
-                                            <div class="button-dot"></div>
+                                <div class=" flex gap-4">
+                                    @forelse ($buttons as $button)
+                                        <div class="tp-fi-hero-btn mb-20 tp-fade-anim" data-delay=".5">
+                                            <x-button as="a" :variant="$button['type']" href="{{ $button['url'] }}">{{$button['label']}}</x-button>
                                         </div>
-                                    </a>
+                                    @empty
+                                        
+                                    @endforelse
                                 </div>
                                 <div class="tp-fi-hero-contact tp-fade-anim ">
                                     <a href="tel:01245697" class="text-white">

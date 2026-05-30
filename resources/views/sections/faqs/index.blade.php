@@ -1,6 +1,15 @@
 @props([
     'faqs' => collect(),
-    'id' => 'faqs-section'
+    'label' => 'Frequently Asked Questions',
+    'headline' => 'Understand how our work brings clarity to markets, institutions, and development.',
+    'id' => 'faqs-section',
+    'ctaTitle' => 'Still have questions? We are here to provide clarity.',
+    'ctaHighlights' => [
+        'Evidence-based policy insight',
+        'Practical reform guidance',
+        'Multi-stakeholder engagement',
+        'Clear pathways for collaboration',
+    ]
 ])
 
 @if ($faqs->isNotEmpty())
@@ -10,9 +19,8 @@
             <div class="col-lg-7">
                 <div class="tp-fi-faq-wrapper mb-30">
                     <div class="tp-fi-faq-heading mb-60">
-                        <span class="tp-section-sub tp-fade-anim">Consora faq</span>
-                        <h3 class="tp-section-title" data-text-split data-letters-fade-in>
-                            Simplifying complex financial <br> decisions through FAQs.
+                        <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
+                        <h3 class="tp-section-title" data-text-split data-letters-fade-in>{{$headline}}
                         </h3>
                     </div>
                     <div class="tp-faq-wrap tp-fade-anim" data-delay=".5">
@@ -31,9 +39,23 @@
                         <div class="tp-fi-faq-support-shape">
                             <img src="assets/img/finance/banner/faq-bg.png" alt="">
                         </div>
-                        <h3 class="tp-fi-faq-support-title">Hey, do you have any <br> more questions?</h3>
+                        <h3 class="tp-fi-faq-support-title">{{ $ctaTitle }}</h3>
                         <div class="tp-fi-faq-support-list pb-60">
                             <ul>
+                                @forelse ($ctaHighlights as $highlight)
+                                    <li>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8"
+                                                fill="none">
+                                                <path d="M8.93182 0.75L3.30682 6.5254L0.75 3.90022" stroke="#222F30"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        {{ $highlight }}
+                                    </li>                                    
+                                @empty
+                                    
+                                @endforelse
                                 <li>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8"
@@ -44,47 +66,10 @@
                                     </span>
                                     Real time performance tracking
                                 </li>
-                                <li>
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8"
-                                            fill="none">
-                                            <path d="M8.93182 0.75L3.30682 6.5254L0.75 3.90022" stroke="#222F30"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    Automated risk assessment
-                                </li>
-                                <li>
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8"
-                                            fill="none">
-                                            <path d="M8.93182 0.75L3.30682 6.5254L0.75 3.90022" stroke="#222F30"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    Multi layered security login
-                                </li>
-                                <li>
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8"
-                                            fill="none">
-                                            <path d="M8.93182 0.75L3.30682 6.5254L0.75 3.90022" stroke="#222F30"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                    Smart goal setting
-                                </li>
                             </ul>
                         </div>
                         <div class="tp-fi-support-btn">
-                            <a href="contact.html" class="tp-btn-event">
-                                <div class="button-text">Schedule a free consultation</div>
-                                <div class="button-icon-wrapper">
-                                    <img src="assets/img/finance/hero/btn-arrow.svg" loading="lazy" width="16"
-                                        height="16" alt="" class="button-image">
-                                    <div class="button-dot"></div>
-                                </div>
-                            </a>
+                            <x-button as="a" href="{{ route('contact') }}" variant="primary">Get in Touch</x-button>
                         </div>
                     </div>
                 </div>

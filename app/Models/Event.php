@@ -4,12 +4,15 @@ namespace App\Models;
 
 use App\Concerns\IsPublishable;
 use App\Enums\EventStatus;
+use App\Support\Seo;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
@@ -38,14 +41,15 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class Event extends Model implements HasMedia
 {
-    use HasFactory, HasSlug, InteractsWithMedia, IsPublishable, SoftDeletes;
+    use HasFactory, HasSEO, HasSlug, InteractsWithMedia, IsPublishable, SoftDeletes;
 
-    public function publishStatus () {
+    public function publishStatus()
+    {
         return [
             EventStatus::Open,
             EventStatus::Scheduled,
             EventStatus::Completed,
-            EventStatus::Closed
+            EventStatus::Closed,
         ];
     }
 
@@ -75,6 +79,11 @@ class Event extends Model implements HasMedia
         return 'slug';
     }
 
+    public function getDynamicSEOData(): SEOData
+    {
+        return Seo::event($this);
+    }
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('featured_image')->singleFile();
@@ -96,11 +105,13 @@ class Event extends Model implements HasMedia
         return $this->hasMany(EventRegistration::class);
     }
 
-    function getDateAttribute(){
+    public function getDateAttribute()
+    {
         return $this->start_at->format('jS F');
     }
 
-    function getImageAttribute() {
+    public function getImageAttribute()
+    {
         return $this->getFirstMediaUrl('featured_image');
     }
 }

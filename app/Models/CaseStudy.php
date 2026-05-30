@@ -3,13 +3,15 @@
 namespace App\Models;
 
 use App\Concerns\IsPublishable;
-use App\Concerns\IsSortable;
 use App\Enums\CaseStudyStatus;
+use App\Support\Seo;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
@@ -31,12 +33,13 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class CaseStudy extends Model implements HasMedia
 {
-    use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes, IsPublishable;
+    use HasFactory, HasSEO, HasSlug, InteractsWithMedia, IsPublishable, SoftDeletes;
 
-    public function publishStatus() {
-        return  [
-            CaseStudyStatus::Completed, 
-            CaseStudyStatus::Active
+    public function publishStatus()
+    {
+        return [
+            CaseStudyStatus::Completed,
+            CaseStudyStatus::Active,
         ];
     }
 
@@ -63,6 +66,11 @@ class CaseStudy extends Model implements HasMedia
         return 'slug';
     }
 
+    public function getDynamicSEOData(): SEOData
+    {
+        return Seo::caseStudy($this);
+    }
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('featured_image')->singleFile();
@@ -74,11 +82,13 @@ class CaseStudy extends Model implements HasMedia
         return $this->belongsTo(Service::class);
     }
 
-    function getImageAttribute(){
+    public function getImageAttribute()
+    {
         return $this->getFirstMediaUrl('featured_image');
     }
 
-    function getGalleryAttribute(){
-        return $this->getMedia('gallery')->map(fn($media) => $media->getFullUrl());
+    public function getGalleryAttribute()
+    {
+        return $this->getMedia('gallery')->map(fn ($media) => $media->getFullUrl());
     }
 }

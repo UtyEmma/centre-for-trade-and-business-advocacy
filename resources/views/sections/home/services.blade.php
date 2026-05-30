@@ -1,35 +1,31 @@
+@props([
+    'label' => 'What We Do',
+    'headline' => 'Advancing reforms across trade, markets, governance, and policy',
+    'services' => collect()
+])
+
 @if ($services->isNotEmpty())
     <div class="tp-fi-service-ptb tp-sec-ptb pt-130 pb-110">
         <div class="container col-md-10 mx-auto">
             <div class="row align-items-end">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="tp-fi-service-heading mb-60">
-                        <span class="tp-section-sub tp-fade-anim">What we provide</span>
-                        <h3 class="tp-section-title" data-text-split data-letters-fade-in>Powering the complete
-                            landscape
-                            <br>
-                            of global financial
-                            services
+                        <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
+                        <h3 class="tp-section-title md:w-2/3" data-text-split data-letters-fade-in>{{$headline}}
                         </h3>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <div class="tp-fi-service-right text-lg-end mb-60 tp-fade-anim">
-                        <a href="{{ route('services') }}" class="tp-btn-event">
-                            <div class="button-text">Learn more</div>
-                            <div class="button-icon-wrapper">
-                                <img src="assets/img/finance/hero/btn-arrow.svg" loading="lazy" width="16" height="16"
-                                    alt="" class="button-image">
-                                <div class="button-dot"></div>
-                            </div>
-                        </a>
+                        <x-button as="a" href="{{ route('services') }}" variant="primary">Learn More</x-button>
                     </div>
                 </div>
             </div>
+
             <div class="row g-3">
                 @forelse ($services as $service)
-                    <div class="col-lg-4 col-md-6">
-                        <x-services.item :service="$service" />
+                    <div class="col-md-6">
+                        <x-services.list :service="$service" />
                     </div>
                 @empty
                 @endforelse
