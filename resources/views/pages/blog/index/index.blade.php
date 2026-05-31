@@ -2,9 +2,7 @@
    <x-partials::page.header 
       title="News & Insights"
       description="Discover the latest insights, trends, and expert advice in our blog. Stay informed and inspired with our in-depth articles on technology, business, and innovation."
-      :breadcrumbs="[
-         ['name' => 'News & Insights']
-      ]"
+      image="{{ asset('assets/images/banners/blog-page-banner.png') }}"
    />
 
       <div class="grid md:grid-cols-3 gap-5 col-md-10 pt-135 pb-110 mx-auto">

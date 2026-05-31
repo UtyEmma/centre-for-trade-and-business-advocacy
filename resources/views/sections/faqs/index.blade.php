@@ -1,5 +1,5 @@
 @props([
-    'faqs' => collect(),
+    'faqs' => $pageFaqs,
     'label' => 'Frequently Asked Questions',
     'headline' => 'Understand how our work brings clarity to markets, institutions, and development.',
     'id' => 'faqs-section',

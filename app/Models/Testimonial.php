@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Concerns\IsFeaturable;
+use App\Concerns\IsPublishable;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -23,7 +25,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 ])]
 class Testimonial extends Model implements HasMedia
 {
-    use HasFactory, InteractsWithMedia, SoftDeletes;
+    use HasFactory, InteractsWithMedia, IsPublishable, IsFeaturable, SoftDeletes;
 
     protected function casts(): array
     {
@@ -39,5 +41,13 @@ class Testimonial extends Model implements HasMedia
     {
         $this->addMediaCollection('profile_photo')->singleFile();
         $this->addMediaCollection('logo')->singleFile();
+    }
+
+    function getImageAttribute() {
+        return $this->getFirstMediaUrl('profile_photo');
+    }
+
+    function getLogoAttribute(){
+        return $this->getFirstMediaUrl('logo');
     }
 }

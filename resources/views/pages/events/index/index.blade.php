@@ -3,6 +3,7 @@
     <x-partials::page.header 
         title="Our Events"
         description="Discover our upcoming events, workshops, and webinars designed to empower your business with the latest insights and strategies in consulting, finance, and marketing. Join us to connect with industry experts and elevate your business success."
+        image="{{ asset('assets/images/banners/events-page-banner.png') }}"
     />
 
     <!-- blog area start -->

@@ -3,12 +3,10 @@
          <x-partials::page.header 
             title="What We Do"
             description="We are a global consulting firm that helps organizations transform their businesses and achieve their goals through innovative solutions and strategic guidance."
-            :breadcrumbs="[
-               ['name' => 'What We Do']
-            ]"
+            image="{{ asset('assets/images/banners/services-page-banner.png') }}"
          />
 
-         {{-- <x-sections::services.counter /> --}}
+         <x-sections::services.counter />
          
          <x-partials::services.grid :services="$this->services" />
 

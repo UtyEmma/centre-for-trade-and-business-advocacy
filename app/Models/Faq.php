@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Concerns\BelongsToPages;
+use App\Concerns\IsFeaturable;
 use App\Concerns\IsPublishable;
 use App\Concerns\IsSortable;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
@@ -18,10 +19,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
     'category',
     'sort_order',
     'is_published',
+    'is_featured'
 ])]
 class Faq extends Model
 {
-    use HasFactory, SoftDeletes, IsSortable, IsPublishable, BelongsToPages;
+    use HasFactory, SoftDeletes, IsSortable, IsPublishable, IsFeaturable, BelongsToPages;
 
     protected function casts(): array {
         return [

@@ -2,9 +2,10 @@
     <div class="tp-blog-item-img mb-20 p-relative">
         <a href="{{ route('events.show', $event) }}">
             <img class="radius-6" src="{{ $event->image }}" alt="">
-            <div class="tp-blog-item-icon size-20 rounded-full flex flex-column align-items-center justify-content-center">
+
+            <div class="tp-blog-item-icon bg-[#CEF79E] size-20 rounded-full flex flex-column align-items-center justify-content-center">
                 <p class="text-2xl! mb-0 leading-none">{{ $event->start_at->format('d') }}</span>
-                <p class="text-2xl! mb-0 leading-none">{{ $event->start_at->format('M') }}</span>
+                <p class="text-2xl! font-semibold! mb-0 uppercase leading-none">{{ $event->start_at->format('M') }}</span>
             </div>
         </a>
     </div>

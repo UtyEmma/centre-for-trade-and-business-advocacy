@@ -3,9 +3,7 @@
     <x-partials::page.header
         title="Careers"
         description="Join our team and be part of a dynamic and innovative company that is revolutionizing the way businesses manage their finances. We are looking for talented individuals who are passionate about technology, finance, and delivering exceptional service to our clients."
-        :breadcrumbs="[
-            [ 'name' => 'Careers' ]
-        ]"
+        image="{{ asset('assets/images/banners/careers-page-banner.png') }}"
     />
 
 

@@ -15,14 +15,10 @@
 
     <x-sections::home.how-we-work />
 
-    <x-sections::home.testimonials />
+    <x-sections::home.testimonials :testimonials="$this->testimonials" />
 
-    <!-- team area start -->
     <x-sections::teams :teamMembers="$this->teamMembers" />
-    <!-- team area end -->
 
-
-    <!-- banner area start -->
     {{-- <div class="tp-fi-banner-ptb">
         <div class="tp-fi-banner-wrapper">
             <img src="assets/img/finance/banner/banner-bg-2.jpg" alt="">
@@ -50,12 +46,10 @@
             </div>
         </div>
     </div> --}}
-    <!-- banner area end -->
-
 
     <x-sections::faqs :faqs="$this->faqs" />
 
     <x-sections::home.blog :posts="$this->posts" />
 
-    <x-sections::home.newsletter />
+    
 </main>

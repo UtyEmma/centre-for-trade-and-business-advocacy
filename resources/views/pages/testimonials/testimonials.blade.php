@@ -1,28 +1,10 @@
 <main>
 
-
-         <!-- breadcrumb area start -->
-         <div class="tp-breadcrumb-ptb pt-90 pb-70 z-index-1">
-            <div class="tp-cc-chose-bg">
-               <img src="assets/img/breadcrumb/image-1.jpg" alt="">
-            </div>
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-5">
-                     <div class="tp-breadcrumb-content p-relative">
-                        <ul class="tp-breadcrumb-list">
-                           <li><a href="index-2.html">Home</a></li>
-                           <li>></li>
-                           <li>Testimonials</li>
-                        </ul>
-                        <h2 class="tp-breadcrumb-title">Testimonials</h2>
-                        <p>Through digital innovation, we drive scalable growth, lead climate-positive change, <br> and strengthen organizational excellence</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- breadcrumb area end -->
+   <x-partials::page.header 
+      title="Testimonials" 
+      description="Discover how our services have transformed businesses and empowered individuals. Read firsthand accounts of success, growth, and satisfaction from our valued clients."
+      image="{{ asset('assets/images/banners/testimonials-page-banner.png') }}"
+   />
 
 
          <!-- testimonial area start -->

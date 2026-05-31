@@ -8,6 +8,7 @@ use App\Support\Pages;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\TextInputColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Filters\TrashedFilter;
@@ -29,9 +30,10 @@ final class FaqsTable
                     ->sortable(),
                 TextInputColumn::make('sort_order')
                     ->sortable(),
-                IconColumn::make('is_published')
-                    ->label('Published')
-                    ->boolean(),
+                ToggleColumn::make('is_featured')
+                    ->label('Featured'),
+                ToggleColumn::make('is_published')
+                    ->label('Published'),
                 TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()

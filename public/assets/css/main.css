@@ -82,6 +82,7 @@
 /*  1.1 Theme Default
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap");
+
 .back-to-top-wrapper, a,
 button,
 p,
@@ -142,9 +143,12 @@ li,
   font-style: normal;
 }
 :root {
-  --tp-ff-body: 'TT Hoves Pro Trial', sans-serif;
+  --tp-ff-body: 'Inter', sans-serif;
+  --tp-ff-heading: 'Inter', sans-serif;
+  --tp-ff-tt-pro: 'Inter', sans-serif;
+  /* --tp-ff-body: 'TT Hoves Pro Trial', sans-serif;
   --tp-ff-heading: 'TT Hoves Pro Trial', sans-serif;
-  --tp-ff-tt-pro: 'TT Hoves Pro Trial', sans-serif;
+  --tp-ff-tt-pro: 'TT Hoves Pro Trial', sans-serif; */
   --tp-common-white: #FFFFFF;
   --tp-common-black: #000000;
   --tp-text-body: #333;

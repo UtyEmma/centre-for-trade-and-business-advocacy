@@ -110,7 +110,7 @@
                 <div class="col-xxl-2 col-xl-2 col-6">
                     <div class="tp-header-left-side">
                         <div class="tp-header-logo">
-                            <a href="index-2.html">
+                            <a href="{{ route('home') }}" >
                                 <img data-width="130" src="{{ asset('assets/img/logo/logo.png') }}" alt="">
                             </a>
                         </div>
@@ -164,11 +164,11 @@
                                     </ul>
                                 </li>
                                 <li class="has-dropdown">
-                                    <a href="case-studies.html" class="flex  items-center gap-2">
+                                    <a href="#" class="flex  items-center gap-2">
                                         Publications
                                         <x-menu.icon />
                                     </a>
-                                    <ul class="tp-submenu submenu">
+                                    <ul class="tp-submenu submenu bg-white!">
                                         @forelse ($publicationTypes as $publicationType)
                                             <li>
                                                 <a href="{{ route('publications', $publicationType) }}">{{ $publicationType->name }}</a>
@@ -181,7 +181,7 @@
                                     <a href="{{route('blog')}}">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('contact') }}">Contact</a>
+                                    <a href="{{ route('contact') }}">Contact Us</a>
                                 </li>
                             </ul>
                         </nav>

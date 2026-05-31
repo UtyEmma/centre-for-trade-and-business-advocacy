@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Faq;
 use App\Models\PublicationType;
 use App\Support\Seo;
 use Closure;
@@ -22,6 +23,7 @@ class ShareViewData
     {
         $this->factory->share('publicationTypes', PublicationType::active()->get());
         $this->factory->share('seoSource', Seo::sourceForRequest($request));
+        $this->factory->share('pageFaqs', Faq::page()->get());
 
         return $next($request);
     }

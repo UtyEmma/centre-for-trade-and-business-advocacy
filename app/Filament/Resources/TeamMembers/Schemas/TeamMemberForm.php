@@ -48,6 +48,9 @@ final class TeamMemberForm
                             ->integer()
                             ->default(0)
                             ->required(),
+                        Toggle::make('is_featured')
+                            ->label('Featured')
+                            ->default(true),
                         Toggle::make('is_published')
                             ->label('Published')
                             ->default(true),

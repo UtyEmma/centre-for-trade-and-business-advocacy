@@ -7,6 +7,7 @@ use App\Filament\Resources\Support\CmsTableActions;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Filters\TrashedFilter;
@@ -35,9 +36,10 @@ final class TeamMembersTable
                     ->placeholder('-'),
                 TextColumn::make('sort_order')
                     ->sortable(),
-                IconColumn::make('is_published')
-                    ->label('Published')
-                    ->boolean(),
+                ToggleColumn::make('is_featured')
+                    ->label('Featured'),
+                ToggleColumn::make('is_published')
+                    ->label('Published'),
             ])
             ->filters([
                 SelectFilter::make('team_category_id')

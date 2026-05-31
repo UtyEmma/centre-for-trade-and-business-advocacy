@@ -43,6 +43,9 @@ final class FaqForm
                             ->multiple()
                             ->native(false)
                             ->options(Pages::list()),
+                        Toggle::make('is_featured')
+                            ->label('Featured')
+                            ->default(true),
                         Toggle::make('is_published')
                             ->label('Published')
                             ->default(true),

@@ -9,7 +9,8 @@
     'hideHome' => false,
 ])
 
-<div class="tp-breadcrumb-ptb pt-90 pb-70 z-index-1 bg-[#333] bg-blend-multiply bg-center bg-cover" style="background-image: url('{{ $image }}');">
+{{-- bg-[#333] bg-blend-multiply --}}
+<div class="tp-breadcrumb-ptb pt-90 pb-70 z-index-1  bg-center bg-cover" style="background-image: url('{{ $image }}');">
     {{-- <div class="tp-cc-chose-bg">
         <img src="{{ $image }}" alt="">
     </div> --}}
@@ -22,7 +23,9 @@
                             <li>
                                 <a class="fw-semibold text-white text-base" href="{{ route('home') }}">Home</a>
                             </li>
-                            <li class="text-white text-base">></li> 
+                            <li class="text-white text-base">
+                                <x-heroicon-m-chevron-right class="size-5" />
+                            </li> 
                         @endif
                         
                         @foreach ($breadcrumbs as $breadcrumb)
@@ -35,7 +38,9 @@
                             </li>
 
                             @if (!$loop->last)
-                                <li class="text-white text-base">></li>
+                                <li class="text-white text-base">
+                                    <x-heroicon-m-chevron-right class="size-5" />
+                                </li>
                             @endif
                         @endforeach
                         {{-- <li><a href="index-2.html">Home</a></li>

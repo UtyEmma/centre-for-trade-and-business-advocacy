@@ -3,12 +3,22 @@
     <x-partials::page.header 
         title="Case Studies"
         description="Explore our case studies to see how we've helped clients achieve remarkable results across various industries. From driving a 45% increase in sales for a retail partner to accelerating decarbonization in the farming supply chain, our case studies showcase our expertise and impact."
+        image="{{ asset('assets/images/banners/case-study-page-banner.png') }}"
     />
 
-
-         <!-- case studies area start -->
-         <div class="tp-case-studies-ptb tp-sec-ptb pt-135 pb-110">
-            <div class="container col-md-10 mx-auto">
+    
+    <!-- case studies area start -->
+    <div class="tp-case-studies-ptb tp-sec-ptb pt-135 pb-110">
+       <div class="container col-md-10 mx-auto">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="tp-fi-service-heading text-center mb-60">
+                        <span class="tp-section-sub tp-fade-anim">What we provide</span>
+                        <h3 class="tp-section-title" data-text-split data-letters-fade-in>Powering the complete landscape <br> of
+                           global financial services</h3>
+                     </div>
+                  </div>
+               </div>
                <div class="row">
                     @forelse ($this->caseStudies as $caseStudy)
                         <div class="col-lg-6">

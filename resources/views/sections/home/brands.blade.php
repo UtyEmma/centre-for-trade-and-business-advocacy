@@ -30,7 +30,7 @@
                                     @forelse ($stakeholders as $stakeholder)
                                         <div class="swiper-slide">
                                             <div class="tp-fi-brand-slider-item">
-                                                <p class="font-medium!">{{ $stakeholder }}</p>
+                                                <p class="font-medium! text-nowrap">{{ $stakeholder }}</p>
                                             </div>
                                         </div>
                                     @empty

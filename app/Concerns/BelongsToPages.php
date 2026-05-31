@@ -16,4 +16,10 @@ trait BelongsToPages {
         }
     }
 
+    function scopePage($query, $strict = true){
+        $query->withoutGlobalScope('page')
+            ->whereJsonContains('page', request()->route()->getName())
+            ->when(!$strict, fn($query) => $query->orWhereNull('page'));
+    }
+
 }
