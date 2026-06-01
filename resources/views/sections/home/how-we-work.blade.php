@@ -41,7 +41,7 @@
                     <div class="tp-about-vision-item bg-[#F7F7F5]! mb-30 tp-fade-anim" data-delay=".5">
                         <div class="tp-about-vision-item-icon">
                             <span>
-                                @svg($highlight['icon'], 'size-10 ')
+                                @svg($highlight['icon'], 'size-10 text-primary!')
                             </span>
                         </div>
                         <div class="tp-about-vision-item-content">

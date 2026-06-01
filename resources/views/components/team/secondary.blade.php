@@ -8,10 +8,9 @@
         </div>
         <div class="tp-cc-team-item-thumb">
             <img class="radius-6 aspect-3/4 object-cover" src="{{ $teamMember->image }}" alt="">
-            <div class="tp-cc-team-social">
+            <div class="tp-cc-team-social ">
                 <span class="tp-cc-team-social-link">
-                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.08333 0.0644531L7.08333 15.0645M14.1667 7.98112L0 7.98112"
                             stroke="currentcolor" stroke-width="1.5"></path>
                     </svg>

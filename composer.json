@@ -11,6 +11,7 @@
         "filament/filament": "*",
         "filament/spatie-laravel-media-library-plugin": "*",
         "filament/spatie-laravel-settings-plugin": "*",
+        "guava/filament-icon-picker": "^4.0",
         "laravel/framework": "^13.7",
         "laravel/tinker": "^3.0",
         "livewire/livewire": "^4.1",

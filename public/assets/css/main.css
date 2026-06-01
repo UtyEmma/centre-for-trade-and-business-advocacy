@@ -162,7 +162,7 @@ li,
   --tp-finance-secondary: #0F3D2E;
   --tp-finance-gray: #E7E8E1;
   --tp-finance-white: #F7F7F5;
-  --tp-consulting-primary: #C1F43D;
+  --tp-consulting-primary: #C9A24B;
   --tp-consulting-secondary: #0F3D2E;
   --tp-consulting-gray: #586C6E;
   --tp-consulting-white: #F6F5F2;
@@ -180,6 +180,12 @@ li,
   --tp-accounting-gray: #F9E9DB;
   --tp-accounting-brown: #3A1510;
   --tp-accounting-wood: #897E7B;
+
+  --bs-primary: #C9A24B;
+  --bs-primary-rgb: 201, 162, 75;
+
+  --bs-secondary: #0F3D2E;
+  --bs-secondary-rgb: 15, 61, 46;
 }
 
 .theme-finance {
@@ -199,22 +205,22 @@ li,
 }
 
 .theme-advisory {
-  --tp-theme-primary: #1B3942;
-  --tp-theme-secondary: #67797E;
+  --tp-theme-primary: #C9A24B;
+  --tp-theme-secondary: #0F3D2E;
   --tp-theme-orange: #FE5B2C;
   --tp-theme-white: #F7F7F7;
 }
 
 .theme-corporate {
-  --tp-theme-primary: #123543;
-  --tp-theme-secondary: #67797E;
+  --tp-theme-primary: #C9A24B;
+  --tp-theme-secondary: #0F3D2E;
   --tp-theme-sulu: #BEFF74;
   --tp-theme-white: #F8F8F8;
 }
 
 .theme-accounting {
-  --tp-theme-primary: #FF6347;
-  --tp-theme-secondary: #FF7D55;
+  --tp-theme-primary: #C9A24B;
+  --tp-theme-secondary: #0F3D2E;
   --tp-theme-3: #B3452A;
   --tp-theme-gray: #F9E9DB;
   --tp-theme-brown: #3A1510;
@@ -1541,7 +1547,7 @@ input[type=color] {
   height: 5px;
   width: 100%;
   z-index: -1;
-  background: #CEF79E;
+  background: rgba(240, 173, 29, 0.565)
 }
 .tp-section-sub.primary-color {
   color: var(--tp-theme-primary);
@@ -2343,7 +2349,10 @@ input[type=color] {
 }
 .tp-cc-blog-item:hover .tp-cn-blog-item::after {
   height: 100%;
-  background: var(--tp-corporate-sulu);
+  background: var(--tp-consulting-primary);
+}
+.tp-cc-blog-item:hover .tp-cn-blog-item .description {
+  color: #fafafa;
 }
 .tp-cc-blog-item:hover .tp-cn-blog-item-thumb img {
   transform: scale(1.1);
@@ -5970,7 +5979,7 @@ input[type=color] {
   transition: 0.4s;
   visibility: hidden;
   border-radius: 6px;
-  background: linear-gradient(180deg, rgba(190, 255, 116, 0) 24%, #BEFF74 100%);
+  background: linear-gradient(180deg, rgba(190, 255, 116, 0) 24%, #C9A24B 100%);
 }
 .tp-cc-team-social {
   left: 0;

@@ -4,7 +4,6 @@ namespace App\Filament\Resources\Services\Tables;
 
 use App\Filament\Resources\Support\CmsTable;
 use App\Filament\Resources\Support\CmsTableActions;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\TextInputColumn;
@@ -12,7 +11,7 @@ use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
-use Wallacemartinss\FilamentIconPicker\Tables\Columns\IconPickerColumn;
+use Guava\IconPicker\Tables\Columns\IconColumn;
 
 final class ServicesTable
 {
@@ -25,9 +24,8 @@ final class ServicesTable
                 SpatieMediaLibraryImageColumn::make('image')
                     ->collection('image')
                     ->label('Image'),
-                IconPickerColumn::make('icon')
-                    ->label('Icon')
-                    ->medium(),
+                IconColumn::make('icon')
+                    ->label('Icon'),
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable(),

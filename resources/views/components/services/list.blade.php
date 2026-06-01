@@ -1,4 +1,4 @@
-<div class="tp-success-item p-relative">
+<div class="tp-success-item p-relative group">
     <div class="tp-success-item-icon left-[58.33333333%]!">
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -10,7 +10,7 @@
         <div class="col-md-7">
             <div class="tp-success-item-content h-96!  justify-between pe-5!">
                 <div class="">
-                    @svg($service->icon, 'size-7 text-[#01373D]')
+                    @svg($service->icon, 'size-7 text-primary! group-hover:text-white/80!')
                 </div>
 
                 <div class="tp-success-item-bottom">
@@ -18,7 +18,7 @@
                         <a class="tp-line-anim leading-normal" href="{{ route('services', $service) }}">{{$service->title}}</a>
                     </h3>
 
-                    <p class="line-clamp-3! mb-5! text-gray-500!">{{$service->summary}}</p>
+                    <p class="line-clamp-3! mb-5! text-gray-500! group-hover:text-white/80!">{{$service->summary}}</p>
 
                     <div class="tp-cn-service-item-btn mb-0!">
                         <a class="tp-btn tp-btn-border tp-btn-switch-animation" href="{{ route('services.show', $service) }}">

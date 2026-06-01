@@ -11,7 +11,7 @@
                 <div class="row align-items-end">
                     <div class="col-lg-6">
                         <div class="tp-cc-team-heading mb-60">
-                            <span class="tp-cc-section-sub tp-fade-anim">{{ $label }}</span>
+                            <span class="tp-cc-section-sub tp-fade-anim text-primary!">{{ $label }}</span>
                             <h3 class="tp-section-title advisory-color" data-text-split data-letters-fade-in>{{$headline}}</h3>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
                             data-delay=".5">
                             <div class="tp-fa-hero-btn">
                                 <a href="{{ route('careers') }}">Join our team
-                                    <span>
+                                    <span class="bg-primary">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
                                             fill="none">
                                             <path d="M0.75 4.75H8.75" stroke="currentColor" stroke-width="1.5"

@@ -1,4 +1,4 @@
-<div class="tp-cn-blog-item mb-30 p-5!">
+<div class="tp-cn-blog-item hover:bg-transparent! mb-30 p-5!">
     @if ($post->image)
         <div class="tp-cc-blog-item-thumb radius-6 mb-5!">
             <a href="{{ route('blog.show', $post) }}">
@@ -22,15 +22,15 @@
         </div>
 
         <div class="tp-cn-blog-item-meta">
-            <span class="date">{{ $post->date }}</span>
+            <span class="date flex items-center"><x-phosphor-calendar class="size-5 text-primary! me-1" /> {{ $post->date }}</span>
         </div>
     </div>
 
-    <h3 class="tp-cn-blog-item-title">
+    <h3 class="tp-cn-blog-item-title mb-2!">
         <a class="tp-line-anim text-xl!" href="{{ route('blog.show', $post) }}">{{ $post->title }}</a>
     </h3>
 
-    <p class="description line-clamp-3">{{$post->excerpt}}</p>
+    <p class="description line-clamp-3 mb-5!">{{$post->excerpt}}</p>
     {{-- <div class="tp-cn-blog-item-user"> --}}
         
         {{-- <div class="stats">
@@ -50,14 +50,6 @@
         </div> --}}
     {{-- </div> --}}
     <div class="tp-cn-blog-item-btn">
-        <a class="tp-btn tp-btn-switch-animation" href="{{ route('blog.show', $post) }}">
-            <span class="d-flex align-items-center justify-content-center">
-            <span class="btn-text">
-                Read more
-            </span>
-            <i class="btn-icon"></i>
-            <i class="btn-icon"></i>
-            </span>
-        </a>
+        <x-button as="a" href="{{ route('blog.show', $post) }}" variant="primary" class="tp-btn-switch-animation">Read more</x-button>
     </div>
 </div>

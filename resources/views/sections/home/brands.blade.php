@@ -20,7 +20,7 @@
                     <div class="tp-fi-brand-top text-center pb-70">
                         <h3 class="tp-section-title mb-20" data-text-split data-letters-fade-in>{{$headline}}</h3>
                         <div class="tp-fade-anim" data-delay=".3">
-                            <a class="tp-btn-underline" href="{{ $cta['url'] }}">{{ $cta['label'] }}</a>
+                            <a class="tp-btn-underline text-primary!" href="{{ $cta['url'] }}">{{ $cta['label'] }}</a>
                         </div>
                     </div>
                     <div class="tp-fi-brand-wrapper">

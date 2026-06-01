@@ -205,9 +205,9 @@
                 <div class="col-xxl-4 col-xl-3 col-6">
                     <div class="tp-header-action d-flex justify-content-end">
                         <a href="{{ route('contact') }}" class="tp-btn-event d-none d-xxl-flex">
-                            <div class="button-text">Get free consulting</div>
+                            <div class="button-text">Get in touch</div>
                             <div class="button-icon-wrapper">
-                                <img src="assets/img/finance/hero/btn-arrow.svg" loading="lazy" width="16" height="16"
+                                <img src="{{ asset('assets/img/finance/hero/btn-arrow.svg') }}" loading="lazy" width="16" height="16"
                                     alt="" class="button-image">
                                 <div class="button-dot"></div>
                             </div>

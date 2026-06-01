@@ -25,7 +25,7 @@
     ]
 ])
 
-<div class="tp-cn-philoshopy-ptb p-relative tp-sec-ptb pt-140 pb-110" data-bg-color="#01373D">
+<div class="tp-cn-philoshopy-ptb p-relative tp-sec-ptb pt-140 pb-110 bg-secondary">
     <div class="tp-cn-philoshopy-shape">
         <svg xmlns="http://www.w3.org/2000/svg" width="473" height="563" viewBox="0 0 473 563" fill="none">
         <path d="M323.421 -91C324.382 -30.343 395.506 191.295 610.799 240.591C879.915 302.211 596.382 27.8099 323.421 73.062C306.761 74.9876 280.555 90.3926 309.004 136.607C344.566 194.376 726.135 518.843 186.941 262.736C-244.415 57.8496 241.973 397.876 490.265 550" stroke="white" stroke-opacity="0.04" stroke-width="30"/>
@@ -48,7 +48,7 @@
                         <div class="tp-cn-philoshopy-item-content">
                             <div class="tp-cn-philoshopy-item-icon mb-30">
                                 <span>
-                                    @svg($highlight['icon'], 'size-12 text-[#C1F43D]')
+                                    @svg($highlight['icon'], 'size-12 text-primary')
                                 </span>
                             </div>
                             <h3 class="tp-cn-philoshopy-item-title">

@@ -21,7 +21,7 @@
                     <div class="tp-about-vision-item h-full flex items-start tp-fade-anim" data-delay=".7">
                         <div class="tp-about-vision-item-icon">
                             <span>
-                                <x-phosphor-target-duotone class="size-14 text-[#C1F43D]" />
+                                <x-phosphor-target-duotone class="size-14 text-primary" />
                             </span>
                         </div>
                         <div class="tp-about-vision-item-content">
@@ -34,7 +34,7 @@
                     <div class="tp-about-vision-item h-full flex items-start tp-fade-anim" data-delay=".5">
                         <div class="tp-about-vision-item-icon">
                             <span>
-                                <x-phosphor-binoculars-duotone class="size-14 text-[#C1F43D]" />
+                                <x-phosphor-binoculars-duotone class="size-14 text-primary" />
                             </span>
                         </div>
                         <div class="tp-about-vision-item-content">

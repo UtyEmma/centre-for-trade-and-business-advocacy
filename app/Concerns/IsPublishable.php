@@ -10,6 +10,7 @@ trait IsPublishable {
     public static function bootIsPublishable() {
         if(!request()->is('admin/*')) {
             static::addGlobalScope('published', fn($query) => $query->published());
+            static::addGlobalScope('latestPublished', fn($query) => $query->latest('published_at'));
         }
     }
 

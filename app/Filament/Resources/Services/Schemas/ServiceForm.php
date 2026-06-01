@@ -9,6 +9,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Guava\IconPicker\Forms\Components\IconPicker;
 use Wallacemartinss\FilamentIconPicker\Forms\Components\IconPickerField;
 
 final class ServiceForm
@@ -21,7 +22,7 @@ final class ServiceForm
                 Section::make('Service')
                     ->schema([
                         ...CmsForm::titleAndSlug(),
-                        IconPickerField::make('icon')
+                        IconPicker::make('icon')
                             ->label('Icon')
                             ->searchable(),
                         Textarea::make('summary')

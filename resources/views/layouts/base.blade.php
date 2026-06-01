@@ -25,7 +25,7 @@
 
 <body class="theme-finance">
 
-    {{-- <div id="loading">
+    <div id="loading">
       <div class="loader-mask">
          <li class="tp-fading-circle">
             <div class="tp-circle1 tp-circle"></div>
@@ -41,9 +41,9 @@
             <div class="tp-circle11 tp-circle"></div>
             <div class="tp-circle12 tp-circle"></div>
          </li>
-         <h3 class="loading-title">Consora</h3>
+         {{-- <h3 class="loading-title">{{ env('APP_NAME') }}</h3> --}}
       </div>
-    </div> --}}
+    </div>
    <!-- Loader End -->
 
 
@@ -81,7 +81,7 @@
          </div>
          <div class="tp-offcanvas-main">
             <div class="tp-offcanvas-content d-none d-xl-block">
-               <h3 class="tp-offcanvas-title">{{ $siteSettings->site_name ?? config('app.name') }}</h3>
+               <h3 class="tp-offcanvas-title text-2xl!">{{ $siteSettings->site_name ?? config('app.name') }}</h3>
                @if (filled($siteSettings->tagline ?? null))
                   <p>{{ $siteSettings->tagline }}</p>
                @endif
@@ -89,7 +89,7 @@
             <div class="tp-offcanvas-menu d-xl-none">
                <nav></nav>
             </div>
-            <div class="tp-offcanvas-gallery d-none d-xl-block">
+            {{-- <div class="tp-offcanvas-gallery d-none d-xl-block">
                <div class="row gx-2">
                   <div class="col-md-4 col-3">
                      <div class="tp-offcanvas-gallery-img fix">
@@ -113,7 +113,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> --}}
             <div class="tp-offcanvas-contact">
                <h3 class="tp-offcanvas-title sm">Information</h3>
                <ul>

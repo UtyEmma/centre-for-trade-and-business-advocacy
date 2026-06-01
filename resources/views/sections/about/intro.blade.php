@@ -49,6 +49,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="flex gap-4 flex-wrap mt-8">
+                        <x-button href="{{ route('about') }}" as="a" class="tp-fade-anim mt-8" data-delay=".9">
+                            See what we do
+                        </x-button>
+                        <x-button href="{{ route('contact') }}" variant="secondary" as="a" class="tp-fade-anim mt-8" data-delay=".9">
+                            Get in touch
+                        </x-button>
+                    </div>
                 </div>
             </div>
         </div>

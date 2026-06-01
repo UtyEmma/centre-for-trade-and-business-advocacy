@@ -8,7 +8,7 @@
 
          <x-sections::services.counter />
          
-         <x-partials::services.grid :services="$this->services" />
+         <x-sections::home.services cta="" :services="$this->services" />
 
          <x-sections::services.philosophy />
 

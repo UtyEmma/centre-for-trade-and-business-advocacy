@@ -1,1 +1,1 @@
-@svg('phosphor-caret-down', 'size-4 mb-[3px]! group-hover:-rotate-180 transition-transform duration-300')
+@svg('phosphor-caret-down', 'size-4 mb-[3px]! md:inline hidden group-hover:-rotate-180 transition-transform duration-300')

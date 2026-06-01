@@ -4,10 +4,12 @@ namespace App\Http\Middleware;
 
 use App\Models\Faq;
 use App\Models\PublicationType;
+use App\Models\Service;
 use App\Support\Seo;
 use App\Support\Site;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\View\Factory;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -27,6 +29,8 @@ class ShareViewData
         $this->factory->share('publicationTypes', PublicationType::active()->get());
         $this->factory->share('seoSource', Seo::sourceForRequest($request));
         $this->factory->share('pageFaqs', Faq::page()->get());
+        $this->factory->share('footerQuickLinks', $this->footerQuickLinks());
+        $this->factory->share('footerServices', $this->footerServices());
         $this->factory->share('siteSettings', $siteSettings);
         $this->factory->share('siteLogoUrl', Site::assetUrl($siteSettings->site_logo, '/assets/img/logo/logo.png'));
         $this->factory->share('siteFooterLogoUrl', Site::assetUrl($siteSettings->footer_logo, $siteSettings->site_logo));
@@ -39,5 +43,35 @@ class ShareViewData
         $this->factory->share('siteFooterScripts', $siteSettings->footer_scripts);
 
         return $next($request);
+    }
+
+    /**
+     * @return array<int, array{label: string, url: string}>
+     */
+    protected function footerQuickLinks(): array
+    {
+        return [
+            ['label' => 'Home', 'url' => route('home')],
+            ['label' => 'About Us', 'url' => route('about')],
+            ['label' => 'What We Do', 'url' => route('services')],
+            ['label' => 'Case Studies', 'url' => route('case-studies')],
+            ['label' => 'Our Events', 'url' => route('events')],
+            ['label' => 'Our Blog', 'url' => route('blog')],
+            ['label' => 'Contact Us', 'url' => route('contact')],
+        ];
+    }
+
+    /**
+     * @return Collection<int, Service>
+     */
+    protected function footerServices(): Collection
+    {
+        return Service::query()
+            ->select(['id', 'title', 'slug'])
+            ->published()
+            ->orderBy('sort_order')
+            ->orderBy('title')
+            ->limit(6)
+            ->get();
     }
 }
