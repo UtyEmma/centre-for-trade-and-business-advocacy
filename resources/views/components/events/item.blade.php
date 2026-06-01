@@ -1,25 +1,24 @@
-<div class="tp-blog-item p-relative mb-60 pb-50">
+<div class="tp-blog-item p-relative">
     <div class="tp-blog-item-img mb-20 p-relative">
         <a href="{{ route('events.show', $event) }}">
-            <img class="radius-6" src="{{ $event->image }}" alt="">
-
-            <div class="tp-blog-item-icon bg-[#CEF79E] size-20 rounded-full flex flex-column align-items-center justify-content-center">
-                <p class="text-2xl! mb-0 leading-none">{{ $event->start_at->format('d') }}</span>
-                <p class="text-2xl! font-semibold! mb-0 uppercase leading-none">{{ $event->start_at->format('M') }}</span>
-            </div>
+            <img class="radius-6 h-52! object-cover" src="{{ $event->image }}" alt="">
         </a>
     </div>
     <div class="tp-blog-item-content">
-        <div class="tp-blog-item-meta mb-10">
-        <span>{{ $event->start_at->format('jS F') }} - {{ $event->eventType?->name }}</span>
+        <div class="tp-blog-item-meta mb-0!">
+            <div >
+                <p class="text-xs! uppercase inline-block font-semibold! mb-3! leading-none! p-1 px-2 rounded border">{{ $event->event_status }}</p>
+                <p class="text-sm! font-medium! mb-0! leading-none!">{{ $event->day }} &bull; {{ $event->time }}</p>
+            </div>
+            <h2 class="tp-blog-item-title m-0! leading-none!">
+                <a class="tp-line-anim text-xl! leading-none font-medium!" href="{{ route('events.show', $event) }}">{{ $event->title }}</a>
+            </h2>
+            <p class="text-sm!">{{ $event->event_location }}</p>
         </div>
 
         <div>
-            <h2 class="tp-blog-item-title m-0">
-                <a class="tp-line-anim" href="{{ route('events.show', $event) }}">{{ $event->title }}</a>
-            </h2>
 
-            <p>{{$event->summary}}</p>
+            {{-- <p>{{$event->summary}}</p> --}}
         </div>
     </div>
 </div>

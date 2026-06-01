@@ -33,6 +33,7 @@ use Spatie\Sluggable\SlugOptions;
     'end_at',
     'registration_deadline',
     'external_registration_url',
+    'registrations_enabled',
     'capacity',
     'status',
     'sort_order',
@@ -42,6 +43,8 @@ use Spatie\Sluggable\SlugOptions;
 class Event extends Model implements HasMedia
 {
     use HasFactory, HasSEO, HasSlug, InteractsWithMedia, IsPublishable, SoftDeletes;
+
+    protected $appends = ['time', 'date', 'event_location', 'day', 'event_status'];
 
     public function publishStatus()
     {
@@ -59,6 +62,7 @@ class Event extends Model implements HasMedia
             'start_at' => 'datetime',
             'end_at' => 'datetime',
             'registration_deadline' => 'datetime',
+            'registrations_enabled' => 'boolean',
             'capacity' => 'integer',
             'status' => EventStatus::class,
             'sort_order' => 'integer',
@@ -105,13 +109,85 @@ class Event extends Model implements HasMedia
         return $this->hasMany(EventRegistration::class);
     }
 
+    public function isPubliclyVisible(): bool
+    {
+        return ! in_array($this->status, [EventStatus::Draft, EventStatus::Cancelled], true);
+    }
+
+    public function acceptsRegistrations(): bool
+    {
+        return $this->registrations_enabled
+            && in_array($this->status, [EventStatus::Open, EventStatus::Scheduled], true)
+            && (! $this->registration_deadline || $this->registration_deadline->greaterThanOrEqualTo(now()))
+            && (! $this->end_at || $this->end_at->greaterThanOrEqualTo(now()));
+    }
+
     public function getDateAttribute()
     {
-        return $this->start_at->format('jS F');
+        return $this->start_at?->format('jS F') ?? '';
     }
 
     public function getImageAttribute()
     {
         return $this->getFirstMediaUrl('featured_image');
+    }
+
+    public function getDayAttribute()
+    {
+        if (! $this->start_at) {
+            return '';
+        }
+
+        $format = $this->start_at->year !== now()->year ? 'D, jS M Y' : 'D, jS M';
+        $startDay = $this->start_at->format($format);
+
+        if ($this->end_at && ! $this->end_at->isSameDay($this->start_at)) {
+            return str($startDay)->append(' - '.$this->end_at->format($format))->toString();
+        }
+
+        return $startDay;
+    }
+
+    public function getTimeAttribute()
+    {
+        return $this->start_at?->format('H:i A') ?? '';
+    }
+
+    public function getEventLocationAttribute()
+    {
+        return $this->venue ?? 'Online';
+    }
+
+    public function getEventStatusAttribute(): string
+    {
+        $startsAt = $this->start_at;
+
+        if (! $startsAt) {
+            return 'Upcoming';
+        }
+
+        $now = now();
+        $endsAt = $this->end_at;
+
+        if (
+            $endsAt
+            && $startsAt->lessThanOrEqualTo($now)
+            && $endsAt->greaterThanOrEqualTo($now)
+        ) {
+            return 'Ongoing';
+        }
+
+        if (
+            $startsAt->isSameDay($now)
+            && (! $endsAt || $endsAt->greaterThanOrEqualTo($now))
+        ) {
+            return 'Happening Today';
+        }
+
+        if ($startsAt->greaterThan($now)) {
+            return 'Upcoming';
+        }
+
+        return 'Past Event';
     }
 }

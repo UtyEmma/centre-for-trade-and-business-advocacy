@@ -66,6 +66,9 @@ final class EventInfolist
                         TextEntry::make('registration_deadline')
                             ->dateTime()
                             ->placeholder('-'),
+                        IconEntry::make('registrations_enabled')
+                            ->label('Registrations enabled')
+                            ->boolean(),
                         TextEntry::make('status')
                             ->badge(),
                     ])

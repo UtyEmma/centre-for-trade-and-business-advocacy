@@ -47,6 +47,9 @@ final class EventsTable
                     ->dateTime()
                     ->sortable()
                     ->placeholder('-'),
+                IconColumn::make('registrations_enabled')
+                    ->label('Registrations')
+                    ->boolean(),
                 IconColumn::make('is_published')
                     ->label('Published')
                     ->boolean(),
@@ -72,6 +75,8 @@ final class EventsTable
                     ->options(EventStatus::class),
                 TernaryFilter::make('is_featured')
                     ->label('Featured'),
+                TernaryFilter::make('registrations_enabled')
+                    ->label('Registrations enabled'),
                 TernaryFilter::make('is_published')
                     ->label('Published'),
                 DateRangeFilter::make('start_at', 'Start date'),

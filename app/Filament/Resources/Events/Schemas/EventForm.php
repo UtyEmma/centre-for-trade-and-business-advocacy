@@ -76,6 +76,9 @@ final class EventForm
                             ->seconds(false),
                         DateTimePicker::make('registration_deadline')
                             ->seconds(false),
+                        Toggle::make('registrations_enabled')
+                            ->label('Registrations enabled')
+                            ->default(true),
                         Select::make('status')
                             ->options(EventStatus::class)
                             ->default(EventStatus::Draft->value)

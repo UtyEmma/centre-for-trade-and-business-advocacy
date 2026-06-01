@@ -6,18 +6,19 @@
         image="{{ asset('assets/images/banners/events-page-banner.png') }}"
     />
 
-    <!-- blog area start -->
     <div class="tp-blog-area pt-100 pb-100">
         <div class="container col-md-10 mx-auto">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="tp-blog-left-wrapper mr-130 mb-30">
-                        @forelse ($this->events as $event)
-                            <article>
-                                <x-events.item :event="$event" />
-                            </article>
-                        @empty
-                        @endforelse
+                        <div class="grid md:grid-cols-2 gap-5!">
+                            @forelse ($this->events as $event)
+                                <article>
+                                    <x-events.item :event="$event" />
+                                </article>
+                            @empty
+                            @endforelse
+                        </div>
                         
                         <div class="tp-blog-btn">
                             <button class="tp-btn theme-bg-color">
@@ -193,7 +194,5 @@
             </div>
         </div>
     </div>
-    <!-- blog area end -->
-    
 
 </main>

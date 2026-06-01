@@ -1,10 +1,6 @@
 @props([
     'label' => 'What we offer',
     'headline' => 'We bring together strategic oversight, executive leadership, programme coordination, and advisory guidance.',
-    // 'stats' => [
-    //     [2018, 'Established as an independent Nigerian non-profit organisation.', ''],
-    //     [5, 'Programme areas covering key dimensions of equitable market governance.'],
-    // ],
     'stats' => [
         [
             'value' => '2018',
@@ -16,16 +12,6 @@
             'label' => 'Programme Areas',
             'description' => 'Working across trade, competition, digital governance, sustainability, and public-sector accountability.',
         ],
-        // [
-        //     'value' => 'Africa',
-        //     'label' => 'Continental Outlook',
-        //     'description' => 'Rooted in Nigeria while engaging reform issues that shape markets and development across the continent.',
-        // ],
-        // [
-        //     'value' => 'Public Interest',
-        //     'label' => 'Core Focus',
-        //     'description' => 'Guided by evidence, independence, dialogue, and a commitment to fairer markets and stronger institutions.',
-        // ],
     ]
 ])
 
