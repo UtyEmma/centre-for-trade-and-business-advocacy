@@ -56,7 +56,9 @@ final class Seo
     public static function page(PageSeo $page): SEOData
     {
         $title = $page->label;
-        $description = "Explore {$page->label} from ".config('app.name').'.';
+        $siteSettings = Site::settings();
+        $seoSettings = Site::seoSettings();
+        $description = "Explore {$page->label} from ".Site::name($siteSettings).'.';
         $url = $page->publicUrl();
         $schema = self::schemaWithBreadcrumbs($title, $url, $page->route_name === 'home' ? [] : [
             'Home' => self::routeUrl('home'),
@@ -67,7 +69,7 @@ final class Seo
                 ->add(fn (): array => self::cleanSchema([
                     '@context' => 'https://schema.org',
                     '@type' => 'WebSite',
-                    'name' => config('app.name'),
+                    'name' => Site::name(),
                     'url' => self::routeUrl('home'),
                 ]))
                 ->add(fn (): array => self::organization()),
@@ -88,8 +90,12 @@ final class Seo
         return new SEOData(
             title: $title,
             description: $description,
+            author: filled($seoSettings->site_author) ? $seoSettings->site_author : Site::name($siteSettings),
+            image: Site::assetUrl($seoSettings->og_image, $siteSettings->site_logo),
             url: $url,
             schema: $schema,
+            site_name: Site::name($siteSettings),
+            favicon: Site::assetUrl($siteSettings->favicon, '/assets/img/logo/favicon.png'),
             type: 'website',
         );
     }
@@ -361,11 +367,11 @@ final class Seo
             '@context' => 'https://schema.org',
             '@type' => $type,
             'name' => $page->label,
-            'description' => "Explore {$page->label} from ".config('app.name').'.',
+            'description' => "Explore {$page->label} from ".Site::name().'.',
             'url' => $page->publicUrl(),
             'isPartOf' => [
                 '@type' => 'WebSite',
-                'name' => config('app.name'),
+                'name' => Site::name(),
                 'url' => self::routeUrl('home'),
             ],
         ]);
@@ -373,12 +379,18 @@ final class Seo
 
     protected static function organization(bool $withContext = true): array
     {
+        $siteSettings = Site::settings();
+
         return self::cleanSchema([
             ...($withContext ? ['@context' => 'https://schema.org'] : []),
             '@type' => 'Organization',
-            'name' => config('app.name'),
+            'name' => Site::name($siteSettings),
             'url' => self::routeUrl('home'),
-            'logo' => asset('assets/img/logo/logo.png'),
+            'logo' => Site::assetUrl($siteSettings->site_logo, '/assets/img/logo/logo.png'),
+            'email' => $siteSettings->email,
+            'telephone' => $siteSettings->phone,
+            'address' => $siteSettings->address,
+            'sameAs' => Site::sameAs($siteSettings),
         ]);
     }
 

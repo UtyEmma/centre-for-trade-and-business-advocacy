@@ -152,16 +152,18 @@ li,
   --tp-common-white: #FFFFFF;
   --tp-common-black: #000000;
   --tp-text-body: #333;
-  --tp-theme-primary: #CEF79E;
-  --tp-theme-secondary: #222F30;
+  --tp-theme-primary: #C9A24B;
+  /* --tp-theme-secondary: #0F3D2E; */
+  /* --tp-theme-secondary: #0C1D33; */
+  --tp-theme-secondary: #0F3D2E;
   --tp-theme-gray: #E7E8E1;
   --tp-theme-white: #F7F7F5;
-  --tp-finance-primary: #CEF79E;
-  --tp-finance-secondary: #222F30;
+  --tp-finance-primary: #C9A24B;
+  --tp-finance-secondary: #0F3D2E;
   --tp-finance-gray: #E7E8E1;
   --tp-finance-white: #F7F7F5;
   --tp-consulting-primary: #C1F43D;
-  --tp-consulting-secondary: #01373D;
+  --tp-consulting-secondary: #0F3D2E;
   --tp-consulting-gray: #586C6E;
   --tp-consulting-white: #F6F5F2;
   --tp-advisory-primary: #1B3942;
@@ -181,15 +183,17 @@ li,
 }
 
 .theme-finance {
-  --tp-theme-primary: #CEF79E;
-  --tp-theme-secondary: #222F30;
+  --tp-theme-primary: #C9A24B;
+  --tp-theme-secondary: #0F3D2E;
   --tp-theme-gray: #E7E8E1;
   --tp-theme-white: #F7F7F5;
 }
 
 .theme-consulting {
-  --tp-theme-primary: #C1F43D;
-  --tp-theme-secondary: #01373D;
+  /* --tp-theme-primary: #C1F43D;
+  --tp-theme-secondary: #0F3D2E; */
+  --tp-theme-primary: #C9A24B;
+  --tp-theme-secondary: #0F3D2E;
   --tp-theme-gray: #586C6E;
   --tp-theme-white: #F6F5F2;
 }

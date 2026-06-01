@@ -1,26 +1,33 @@
 @layer theme, base, components, utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
-
 @source not inline("collapse");
+
 
 @theme {
     --font-sans: 'Open Sans';
-}
-
-@base {
-    body {
-        font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    }
+    --color-primary: #C9A24B;
+    --color-secondary: #0F3D2E;
 }
 
 :root {
-    --color-primary: var(--tp-theme-primary)
-
+    --bs-primary: var(--color-primary);
+    --bs-secondary: var(--color-secondary);
 }
+@base {
+
+    /* body {
+        font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    } */
+    .tp-section-sub::before {
+        background: var(--color-primary) !important;
+    }
+}
+
+

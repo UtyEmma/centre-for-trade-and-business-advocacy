@@ -2,12 +2,15 @@
 
 namespace App\Providers;
 
+use App\Support\Site;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
+use RalphJSmit\Laravel\SEO\Facades\SEOManager;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        $this->configureSeo();
 
         Blade::anonymousComponentPath(__DIR__.'/../../resources/views/partials', 'partials');
         Blade::anonymousComponentPath(__DIR__.'/../../resources/views/sections', 'sections');
@@ -50,5 +54,20 @@ class AppServiceProvider extends ServiceProvider
                 ->uncompromised()
             : null,
         );
+    }
+
+    protected function configureSeo(): void
+    {
+        Site::configureSeo();
+
+        SEOManager::SEODataTransformer(function (SEOData $SEOData): SEOData {
+            $ogTitle = Site::seoSettings()->og_title;
+
+            if (filled($ogTitle) && blank($SEOData->openGraphTitle)) {
+                $SEOData->openGraphTitle = $ogTitle;
+            }
+
+            return $SEOData;
+        });
     }
 }
