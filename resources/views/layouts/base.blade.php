@@ -19,6 +19,7 @@
    <link rel="stylesheet" href="{{ asset('assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
+   {!! CookieConsent::styles() !!}
    @vite(['resources/css/app.css'])
    {!! $siteHeaderScripts ?? '' !!}
 </head>
@@ -159,6 +160,8 @@
     <script src="{{ asset('assets/js/slider-active.js') }}"></script>
     <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    {!! CookieConsent::scripts() !!}
     {!! $siteFooterScripts ?? '' !!}
 </body>
 </html>

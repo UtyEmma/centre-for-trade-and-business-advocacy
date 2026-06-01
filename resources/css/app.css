@@ -28,6 +28,19 @@
     .tp-section-sub::before {
         background: var(--color-primary) !important;
     }
+
 }
+
+.cookie-consent-accept {
+    background-color: var(--color-secondary) !important;
+}
+
+.preferences-btn {
+    background-color: var(--color-primary) !important;
+}
+
+/* .cookie-consent-links-container {
+    background: var(--color-primary) !important;
+} */
 
 

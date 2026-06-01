@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.3",
         "codeat3/blade-phosphor-icons": "^2.4",
+        "devrabiul/laravel-cookie-consent": "^2.1",
         "filament/filament": "*",
         "filament/spatie-laravel-media-library-plugin": "*",
         "filament/spatie-laravel-settings-plugin": "*",
