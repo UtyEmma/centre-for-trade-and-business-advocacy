@@ -1,7 +1,7 @@
 <main>
     <x-partials::page.header 
         title="{{ $publicationType->name }}"
-        description="At Consora, we believe in transforming ideas into impactful digital solutions. As a forward thinking agency, we specialize in empowering businesses to thrive in the digital era. From cutting-edge web development to strategic digital marketing,"
+        description="{{ $publicationType->description }}"
         :breadcrumbs="[
             ['name' => $publicationType->name, 'url' => route('publications', $publicationType)],
         ]"

@@ -8,9 +8,11 @@
 
 <div class="tp-at-download-item">
     <div class="flex flex-col md:flex-row gap-3">
-        <div class="shrink-0 md:w-1/4 tp-at-download-item-thumb mb-30">
-            <img class="radius-6 aspect-square! object-cover" src="{{ $image }}" alt="">
-        </div>
+        @if ($image)
+            <div class="shrink-0 md:w-1/4 tp-at-download-item-thumb mb-30">
+                <img class="radius-6 aspect-square! object-cover" src="{{ $image }}" alt="">
+            </div>
+        @endif
 
         <div class="flex-1">
             <div class="tp-at-download-item-content mb-35 pt-1!">
