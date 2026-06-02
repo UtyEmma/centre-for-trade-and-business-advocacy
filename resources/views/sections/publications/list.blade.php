@@ -1,10 +1,11 @@
 @props([
-    'publications' => collect()
+    'publications' => collect(),
+    'type' => null
 ])
 
 @forelse ($publications as $publication)
     <div>
-        <x-publications.item :publication="$publication" />
+        <x-publications.item :type="$type" :publication="$publication" />
     </div>
 @empty
     <div>

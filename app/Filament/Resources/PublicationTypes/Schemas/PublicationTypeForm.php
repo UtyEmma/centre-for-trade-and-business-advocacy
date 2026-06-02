@@ -22,6 +22,10 @@ final class PublicationTypeForm
                         Textarea::make('description')
                             ->maxLength(65535)
                             ->columnSpanFull(),
+                        TextInput::make('action_text')
+                            ->label('Access Button Text')
+                            ->columnSpanFull()
+                            ->default('Access this document')
                     ])
                     ->columns(2)
                     ->columnSpan(2),

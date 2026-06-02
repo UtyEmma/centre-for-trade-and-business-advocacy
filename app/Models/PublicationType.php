@@ -17,6 +17,7 @@ use Spatie\Sluggable\SlugOptions;
     'name',
     'slug',
     'description',
+    'action_text',
     'sort_order',
     'is_active',
 ])]

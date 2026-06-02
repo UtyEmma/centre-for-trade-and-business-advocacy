@@ -14,6 +14,7 @@
                 <div class="col-md-8 flex flex-col gap-4">
                     <x-sections::publications.list 
                         :publications="$this->publications"
+                        :type="$publicationType"
                     />
                 </div>
 
