@@ -15,7 +15,7 @@
 
                 <div class="tp-success-item-bottom">
                     <h3 class="tp-success-item-title mb-2">
-                        <a class="tp-line-anim leading-normal" href="{{ route('services', $service) }}">{{$service->title}}</a>
+                        <a class="tp-line-anim leading-normal" href="{{ route('services.show', $service) }}">{{$service->title}}</a>
                     </h3>
 
                     <p class="line-clamp-3! mb-5! text-gray-500! group-hover:text-white/80!">{{$service->summary}}</p>

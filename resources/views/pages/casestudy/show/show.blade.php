@@ -9,6 +9,7 @@
             ['name' => $caseStudy->title],
         ]"
         :image="$caseStudy->image"
+        overlay
     />
 
     <div class="tp-case-studies-details-ptb tp-sec-ptb pt-135 pb-110">
@@ -34,10 +35,10 @@
                             </div>
                         </div>
                         <div class="col-xl-8">
-                            <div class="tp-case-studies-details-ii-right mb-30">
-                                <div class="tp-case-studies-details-ii-thumb">
-                                <img class="radius-6 w-100" src="{{ $caseStudy->image }}" alt="{{ $caseStudy->title }}">
-                                </div>
+                        </div>
+                        <div class="tp-case-studies-details-ii-right mb-30">
+                            <div class="tp-case-studies-details-ii-thumb">
+                            <img class="radius-6 w-100" src="{{ $caseStudy->image }}" alt="{{ $caseStudy->title }}">
                             </div>
                         </div>
                     </div>

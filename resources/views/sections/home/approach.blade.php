@@ -36,7 +36,7 @@
             <div class="col-lg-12">
                 <div class="tp-cn-philoshopy-heading mb-70 z-index-1">
                 <span class="tp-section-cn-sub tp-fade-anim">{{ $label }}</span>
-                <h3 class="tp-section-title" data-text-split data-letters-fade-in>{{ $headline }}</h3>
+                <h3 class="tp-section-title w-3/4" data-text-split data-letters-fade-in>{{ $headline }}</h3>
                 </div>
             </div>
         </div>

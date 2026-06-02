@@ -23,15 +23,7 @@
                         <div class="tp-section-cn-sub tp-fade-anim">{{$label}}</div>
                         <h3 class="tp-section-title corporate-color mb-30" data-text-split data-letters-fade-in>{{ $headline }}</h3>
                         <div class="tp-fade-anim" data-delay=".5">
-                            <a class="tp-btn theme-bg-color tp-btn-switch-animation" href="contact.html">
-                                <span class="d-flex align-items-center justify-content-center">
-                                    <span class="btn-text">
-                                        Schedule a free consultation
-                                    </span>
-                                    <i class="btn-icon"></i>
-                                    <i class="btn-icon"></i>
-                                </span>
-                            </a>
+                            <x-button as="a" href="{{ route('contact') }}" variant="primary">Let's work together</x-button>
                         </div>
                     </div>
                     {{-- <div class="tp-cc-fact-bottom mb-30">

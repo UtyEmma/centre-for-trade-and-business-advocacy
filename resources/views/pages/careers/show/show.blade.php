@@ -7,6 +7,7 @@
             [ 'name' => 'Careers', 'url' => route('careers') ],
             [ 'name' => $jobPosting->title ],
         ]"
+        image="{{ asset('assets/images/banners/careers-page-banner.png') }}"
     />
 
 
@@ -17,12 +18,8 @@
                 <div class="col-xl-8 col-12">
                     <div class="tp-career-details-heading tp-career-details-line text-center pb-95 mb-80">
                         <span class="tp-section-sub tp-fade-anim">Career</span>
-                        <h3 class="tp-section-title mb-25" data-text-split data-letters-fade-in>Financial and business
-                            advisor</h3>
-                        <p>At Consora, we believe in transforming ideas into impactful digital solutions. As a
-                            forward-thinking agency, we specialize in <br> empowering businesses to thrive in the
-                            digital era. From cutting-edge web development to strategic digital marketing, <br> Our team
-                            is dedicated to creating tailored solutions that drive growth.</p>
+                        <h3 class="tp-section-title mb-25" data-text-split data-letters-fade-in>{{$jobPosting->title}}</h3>
+                        <p>{{$jobPosting->summary}}</p>
                     </div>
 
                     <div class="tp-career-details-item-wrapper pb-130">
@@ -55,12 +52,12 @@
                         
                         @if ($jobPosting->responsibilities)
                             <div class="tp-career-details-item tp-career-details-line pb-60 mb-70">
-                                <h3 class="tp-career-details-title">About the role:</h3>
+                                <h3 class="tp-career-details-title">Responsibilities</h3>
                                 
                                 <div>{!! $jobPosting->responsibilities  !!}</div>
                             </div>
                         @endif
-
+                        
                         @if ($jobPosting->requirements)
                             <div class="tp-career-details-item tp-career-details-line pb-60 mb-70">
                                 <h3 class="tp-career-details-title">What we’re looking for:</h3>
