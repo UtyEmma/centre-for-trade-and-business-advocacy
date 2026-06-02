@@ -25,7 +25,9 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 ])]
 class Testimonial extends Model implements HasMedia
 {
-    use HasFactory, InteractsWithMedia, IsPublishable, IsFeaturable, SoftDeletes;
+    use HasFactory, InteractsWithMedia, IsFeaturable, IsPublishable, SoftDeletes;
+
+    protected $with = ['media'];
 
     protected function casts(): array
     {
@@ -43,11 +45,13 @@ class Testimonial extends Model implements HasMedia
         $this->addMediaCollection('logo')->singleFile();
     }
 
-    function getImageAttribute() {
+    public function getImageAttribute()
+    {
         return $this->getFirstMediaUrl('profile_photo');
     }
 
-    function getLogoAttribute(){
+    public function getLogoAttribute()
+    {
         return $this->getFirstMediaUrl('logo');
     }
 }

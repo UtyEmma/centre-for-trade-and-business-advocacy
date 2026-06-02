@@ -24,7 +24,7 @@ class PageSeoResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMagnifyingGlass;
 
-    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::CMS;
+    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::SETTINGS;
 
     protected static ?string $modelLabel = 'page SEO';
 

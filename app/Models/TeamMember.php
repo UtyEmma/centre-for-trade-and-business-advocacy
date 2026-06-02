@@ -34,6 +34,8 @@ class TeamMember extends Model implements HasMedia
 
     protected $appends = ['image'];
 
+    protected $with = ['media'];
+
     protected function casts(): array
     {
         return [

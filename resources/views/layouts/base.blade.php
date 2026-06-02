@@ -18,9 +18,12 @@
    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+   <script defer src="https://unpkg.com/alpinejs-masonry@latest/dist/masonry.min.js"></script>
 
    {!! CookieConsent::styles() !!}
-   @vite(['resources/css/app.css'])
+   @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
    {!! $siteHeaderScripts ?? '' !!}
 </head>
 
@@ -149,6 +152,8 @@
    <div class="body-overlay"></div>
 
     {{ $slot }}
+
+    @livewireScriptConfig 
 
     <script src="{{ asset('assets/js/vendor/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap-bundle.js') }}"></script>

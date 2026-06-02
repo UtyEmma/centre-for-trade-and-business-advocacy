@@ -35,6 +35,7 @@ class PageSeo extends Model
             'careers' => ['label' => 'Careers', 'path' => '/careers'],
             'case-studies' => ['label' => 'Case Studies', 'path' => '/case-studies'],
             'teams' => ['label' => 'Team', 'path' => '/team'],
+            'gallery' => ['label' => 'Gallery', 'path' => '/gallery'],
             'blog' => ['label' => 'Blog', 'path' => '/blog'],
             'events' => ['label' => 'Events', 'path' => '/events'],
         ];

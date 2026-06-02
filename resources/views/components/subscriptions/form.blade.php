@@ -1,16 +1,74 @@
 <?php
 
+use App\Actions\Newsletters\SubscribeToNewsletter;
+use App\Support\Newsletter;
 use Livewire\Component;
+use Illuminate\Validation\Rule;
 
 new class extends Component
 {
-    //
+    public string $name = '';
+
+    public string $email = '';
+
+    public string $responseMessage = '';
+
+    public bool $responseIsError = false;
+
+    public function submit(): void
+    {
+        $this->responseMessage = '';
+        $this->responseIsError = false;
+
+        $validated = $this->validate();
+
+        try {
+            $result = app(SubscribeToNewsletter::class)->handle(
+                email: $validated['email'],
+                name: filled($validated['name']) ? $validated['name'] : null,
+                source: 'footer',
+                request: request(),
+            );
+
+            $settings = Newsletter::settings();
+
+            $this->responseMessage = match ($result['result']) {
+                'already_active' => $settings->already_subscribed_message,
+                'confirmation_sent' => $settings->confirmation_sent_message,
+                default => $settings->signup_success_message,
+            };
+
+            if ($result['result'] !== 'already_active') {
+                $this->reset('name', 'email');
+                $this->resetValidation();
+            }
+        } catch (\Exception $exception) {
+            report($exception);
+
+            $this->responseIsError = true;
+            $this->responseMessage = 'We could not process your subscription right now. Please try again.';
+        }
+    }
+
+    /**
+     * @return array<string, list<string>>
+     */
+    protected function rules(): array
+    {
+        return [
+            'name' => ['nullable', 'string', 'max:255'],
+            'email' => ['required', Rule::email()
+            ->rfcCompliant(strict: false)
+            ->validateMxRecord()
+            ->preventSpoofing()],
+        ];
+    }
 };
 ?>
 
 <div class="row align-items-center">
     <div class="col-lg-6">
-        <div class="tp-footer-2-newsletter">
+        <div class="tp-footer-2-newsletter md:mb-0!">
             <div class="tp-footer-2-newsletter-icon">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
@@ -26,15 +84,30 @@ new class extends Component
         </div>
     </div>
     <div class="col-lg-6">
-        <div class="d-flex justify-content-lg-end">
-            <div class="tp-footer-2-newsletter-input">
-            <input type="text" placeholder="Your email address">
-            <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M0.75 6.75H12.75M12.75 6.75L6.75 0.75M12.75 6.75L6.75 12.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+        <form class="flex flex-col items-end" wire:submit="submit" >
+            <div class="tp-footer-2-newsletter-input mb-2">
+                <input type="text" placeholder="Your name (optional)" wire:model="name">
             </div>
-        </div>
+            <x-input.error key="name" class="mt-1 text-white!" />
+
+            <div class="tp-footer-2-newsletter-input">
+                <input type="email" placeholder="Your email address" required wire:model="email">
+                <button type="submit" wire:loading.attr="disabled">
+                    <span wire:loading.remove wire:target="submit">
+                        <x-phosphor-arrow-right class="size-6 text-white!"  />
+                    </span>
+                    <span wire:loading wire:target="submit">
+                        <x-phosphor-spinner class="animate-spin size-6 text-white!"  />
+                    </span>
+                </button>
+            </div>
+            <x-input.error key="email" class="mt-1 text-white!" />
+
+            @if (filled($responseMessage))
+                <p class="ajax-response {{ $responseIsError || $errors->any() ? 'text-white!' : 'text-green-500!' }} mt-2 mb-0">
+                    {{ $errors->first() ?: $responseMessage }}
+                </p>
+            @endif
+        </form>
     </div>
 </div>

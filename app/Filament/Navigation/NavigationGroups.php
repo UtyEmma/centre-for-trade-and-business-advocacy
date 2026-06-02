@@ -13,4 +13,8 @@ final class NavigationGroups
     public const string PEOPLE_AND_PARTNERS = 'People & Partners';
 
     public const string ENQUIRIES = 'Enquiries';
+
+    public const string EMAIL_MARKETING = 'Email Marketing';
+
+    public const string SETTINGS = 'Settings';
 }

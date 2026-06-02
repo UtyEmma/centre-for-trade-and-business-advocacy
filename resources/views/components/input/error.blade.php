@@ -1,3 +1,3 @@
 @error($key)
-    <p class="text-sm text-red-600 mt-2">{{ $message }}</p>
+    <p {{ $attributes->class("text-sm! text-red-600! mt-1!") }}>{{ $message }}</p>
 @enderror

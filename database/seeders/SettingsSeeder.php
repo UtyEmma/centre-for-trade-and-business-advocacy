@@ -2,11 +2,15 @@
 
 namespace Database\Seeders;
 
+use App\Settings\MailSettings;
+use App\Settings\NewsletterSettings;
 use App\Settings\SeoSettings;
 use App\Settings\SiteSettings;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Spatie\LaravelSettings\Settings;
+use Spatie\LaravelSettings\Support\Crypto;
 
 class SettingsSeeder extends Seeder
 {
@@ -16,16 +20,21 @@ class SettingsSeeder extends Seeder
             return;
         }
 
-        $this->seedGroup(SiteSettings::group(), SiteSettings::defaults());
-        $this->seedGroup(SeoSettings::group(), SeoSettings::defaults());
+        $this->seedGroup(SiteSettings::class, SiteSettings::defaults());
+        $this->seedGroup(SeoSettings::class, SeoSettings::defaults());
+        $this->seedGroup(MailSettings::class, MailSettings::defaults());
+        $this->seedGroup(NewsletterSettings::class, NewsletterSettings::defaults());
     }
 
     /**
+     * @param  class-string<Settings>  $settingsClass
      * @param  array<string, mixed>  $settings
      */
-    protected function seedGroup(string $group, array $settings): void
+    protected function seedGroup(string $settingsClass, array $settings): void
     {
         $table = $this->settingsTable();
+        $group = $settingsClass::group();
+        $encrypted = $settingsClass::encrypted();
 
         foreach ($settings as $name => $payload) {
             $exists = DB::table($table)
@@ -41,7 +50,7 @@ class SettingsSeeder extends Seeder
                 'group' => $group,
                 'name' => $name,
                 'locked' => false,
-                'payload' => json_encode($payload, JSON_THROW_ON_ERROR),
+                'payload' => json_encode(in_array($name, $encrypted, true) ? Crypto::encrypt($payload) : $payload, JSON_THROW_ON_ERROR),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

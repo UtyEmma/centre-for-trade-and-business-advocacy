@@ -19,7 +19,7 @@ class ManageSeoSettings extends SettingsPage
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMagnifyingGlass;
 
-    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::CMS;
+    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::SETTINGS;
 
     protected static ?string $navigationLabel = 'SEO Settings';
 

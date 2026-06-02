@@ -31,6 +31,8 @@ class Service extends Model implements HasMedia
 {
     use HasFactory, HasSEO, HasSlug, InteractsWithMedia, IsFeaturable, IsPublishable, SoftDeletes;
 
+    protected $with = ['media'];
+
     protected function casts(): array
     {
         return [
@@ -77,7 +79,8 @@ class Service extends Model implements HasMedia
         return $this->hasMany(Event::class);
     }
 
-    function getImageAttribute(){
+    public function getImageAttribute()
+    {
         return $this->getFirstMediaUrl('image');
     }
 }

@@ -21,7 +21,7 @@ class ManageSiteSettings extends SettingsPage
 {
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
 
-    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::CMS;
+    protected static string|UnitEnum|null $navigationGroup = NavigationGroups::SETTINGS;
 
     protected static ?string $navigationLabel = 'Site Settings';
 

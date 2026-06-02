@@ -38,7 +38,7 @@ class Post extends Model implements HasMedia
 {
     use HasFactory, HasSEO, HasSlug, HasTags, InteractsWithMedia, IsFeaturable, IsPublishable, SoftDeletes;
 
-    protected $with = ['category', 'author'];
+    protected $with = ['category', 'author', 'media'];
 
     public function publishStatus()
     {

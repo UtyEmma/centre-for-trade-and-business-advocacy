@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Support\MailConfiguration;
 use App\Support\Site;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\Blade;
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        MailConfiguration::configure();
         $this->configureSeo();
 
         Blade::anonymousComponentPath(__DIR__.'/../../resources/views/partials', 'partials');

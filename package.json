@@ -9,7 +9,9 @@
     "dependencies": {
         "autoprefixer": "^10.4.20",
         "concurrently": "^9.0.1",
+        "fslightbox": "^3.7.5",
         "laravel-vite-plugin": "^3.1",
+        "masonry-layout": "^4.2.2",
         "vite": "^8.0.0"
     },
     "optionalDependencies": {
@@ -19,6 +21,8 @@
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.3.0",
+        "alpinejs-masonry": "^1.0.16",
+        "data-masonry": "^1.0.6",
         "tailwindcss": "^4.3.0"
     }
 }

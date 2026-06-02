@@ -56,6 +56,7 @@ class ShareViewData
             ['label' => 'What We Do', 'url' => route('services')],
             ['label' => 'Case Studies', 'url' => route('case-studies')],
             ['label' => 'Our Events', 'url' => route('events')],
+            ['label' => 'Gallery', 'url' => route('gallery')],
             ['label' => 'Our Blog', 'url' => route('blog')],
             ['label' => 'Contact Us', 'url' => route('contact')],
         ];

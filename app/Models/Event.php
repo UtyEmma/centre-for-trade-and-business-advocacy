@@ -46,6 +46,8 @@ class Event extends Model implements HasMedia
 
     protected $appends = ['time', 'date', 'event_location', 'day', 'event_status'];
 
+    protected $with = ['media'];
+
     public function publishStatus()
     {
         return [
