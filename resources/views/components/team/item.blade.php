@@ -57,6 +57,6 @@
         <h3 class="tp-cc-team-item-title">
             <a class="tp-line-anim" href="{{ route('teams.show', $teamMember) }}">{{ $teamMember->name }}</a>
         </h3>
-        <p>{{ $teamMember->role }}</p>
+        <p class="text-gray-600">{{ $teamMember->role }}</p>
     </div>
 </div>

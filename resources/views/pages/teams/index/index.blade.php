@@ -5,15 +5,12 @@
         :breadcrumbs="[
             ['name' => 'Meet Our Team'],
         ]" 
-        image="{{ asset('assets/images/banners/about-us-banner.png') }}"
+        image="{{ asset('assets/images/banners/teams-banner.png') }}"
     />
 
-
-    <!-- team area start -->
     <x-sections::teams.area 
         :teamMembers="$this->teamMembers"
     />
-    <!-- team area end -->
 
     <x-sections::home.banner
         headline="Guided by expertise. Driven by public purpose."

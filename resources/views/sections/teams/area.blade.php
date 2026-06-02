@@ -17,11 +17,12 @@
             <div class="row">
                 @forelse ($teamMembers as $teamMember)
                     <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <x-team.item 
-                            :teamMember="$teamMember"
-                        />
+                        <x-team.item :teamMember="$teamMember" />
                     </div>
                 @empty
+                    <div class="col-12">
+                        <p class="text-center text-lg">No team members found.</p>
+                    </div>
                 @endforelse
             </div>
         </div>
