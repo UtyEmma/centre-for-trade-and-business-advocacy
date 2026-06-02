@@ -37,12 +37,22 @@ class SettingsSeeder extends Seeder
         $encrypted = $settingsClass::encrypted();
 
         foreach ($settings as $name => $payload) {
-            $exists = DB::table($table)
+            $existing = DB::table($table)
                 ->where('group', $group)
                 ->where('name', $name)
-                ->exists();
+                ->first(['payload']);
 
-            if ($exists) {
+            if ($existing !== null) {
+                if ($this->shouldRefreshDefault($group, $name, $existing->payload)) {
+                    DB::table($table)
+                        ->where('group', $group)
+                        ->where('name', $name)
+                        ->update([
+                            'payload' => $this->payloadFor($payload, in_array($name, $encrypted, true)),
+                            'updated_at' => now(),
+                        ]);
+                }
+
                 continue;
             }
 
@@ -50,11 +60,48 @@ class SettingsSeeder extends Seeder
                 'group' => $group,
                 'name' => $name,
                 'locked' => false,
-                'payload' => json_encode(in_array($name, $encrypted, true) ? Crypto::encrypt($payload) : $payload, JSON_THROW_ON_ERROR),
+                'payload' => $this->payloadFor($payload, in_array($name, $encrypted, true)),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
         }
+    }
+
+    protected function payloadFor(mixed $payload, bool $encrypted): string
+    {
+        return json_encode($encrypted ? Crypto::encrypt($payload) : $payload, JSON_THROW_ON_ERROR);
+    }
+
+    protected function shouldRefreshDefault(string $group, string $name, string $payload): bool
+    {
+        $refreshableDefaults = [
+            'site' => [
+                'tagline' => ['Promoting equitable markets for sustainable development.'],
+                'email' => [null],
+                'phone' => [null],
+                'address' => [null],
+                'footer_text' => [
+                    'The Centre for Trade and Business Environment Advocacy is an independent Nigerian non-profit policy, research, and advocacy organisation promoting equitable markets for sustainable development.',
+                ],
+            ],
+            'seo' => [
+                'title_suffix' => [
+                    ' | '.SiteSettings::DefaultSiteName,
+                ],
+                'default_description' => [
+                    'The Centre for Trade and Business Environment Advocacy is an independent Nigerian non-profit policy, research, and advocacy organisation promoting equitable markets for sustainable development.',
+                ],
+            ],
+            'mail' => [
+                'from_address' => ['hello@example.com'],
+            ],
+        ];
+
+        if (! array_key_exists($name, $refreshableDefaults[$group] ?? [])) {
+            return false;
+        }
+
+        return in_array(json_decode($payload, true, flags: JSON_THROW_ON_ERROR), $refreshableDefaults[$group][$name], true);
     }
 
     protected function settingsTable(): string

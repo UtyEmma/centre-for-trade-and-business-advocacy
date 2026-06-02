@@ -124,10 +124,12 @@ class ManageSiteSettings extends SettingsPage
                         Textarea::make('header_scripts')
                             ->label('Header scripts')
                             ->rows(8)
+                            ->columnSpanFull()
                             ->helperText('Trusted snippets rendered before the closing head tag.'),
                         Textarea::make('footer_scripts')
                             ->label('Footer scripts')
                             ->rows(8)
+                            ->columnSpanFull()
                             ->helperText('Trusted snippets rendered before the closing body tag.'),
                     ])
                     ->columns(2)

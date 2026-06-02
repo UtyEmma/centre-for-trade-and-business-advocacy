@@ -10,7 +10,7 @@ class MailSettings extends Settings
 
     public string $from_name = 'Centre for Trade and Business Environment Advocacy';
 
-    public string $from_address = 'hello@example.com';
+    public string $from_address = SiteSettings::DefaultEmail;
 
     public ?string $reply_to_name = null;
 
@@ -43,7 +43,9 @@ class MailSettings extends Settings
         return [
             'mailer' => in_array(config('mail.default'), ['smtp', 'log'], true) ? config('mail.default') : 'log',
             'from_name' => config('mail.from.name') ?: SiteSettings::DefaultSiteName,
-            'from_address' => config('mail.from.address') ?: 'hello@example.com',
+            'from_address' => in_array(config('mail.from.address'), [null, '', 'hello@example.com'], true)
+                ? SiteSettings::DefaultEmail
+                : config('mail.from.address'),
             'reply_to_name' => config('mail.reply_to.name'),
             'reply_to_address' => config('mail.reply_to.address'),
             'smtp_host' => config('mail.mailers.smtp.host') ?: '127.0.0.1',

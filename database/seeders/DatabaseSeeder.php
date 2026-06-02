@@ -11,11 +11,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::query()->firstOrCreate(
-            ['email' => 'test@example.com'],
+            ['email' => 'test@'.env('APP_DOMAIN')],
             [
                 'name' => 'Test User',
                 'email_verified_at' => now(),
-                'password' => Hash::make('password'),
+                'password' => Hash::make('1234567890'),
             ],
         );
 

@@ -8,7 +8,7 @@ class SeoSettings extends Settings
 {
     public ?string $default_title = SiteSettings::DefaultSiteName;
 
-    public ?string $title_suffix = ' | '.SiteSettings::DefaultSiteName;
+    public ?string $title_suffix = ' - '.SiteSettings::DefaultSiteName;
 
     public ?string $homepage_title = SiteSettings::DefaultSiteName;
 
@@ -38,7 +38,7 @@ class SeoSettings extends Settings
     {
         return [
             'default_title' => SiteSettings::DefaultSiteName,
-            'title_suffix' => ' | '.SiteSettings::DefaultSiteName,
+            'title_suffix' => ' - '.SiteSettings::DefaultSiteName,
             'homepage_title' => SiteSettings::DefaultSiteName,
             'default_description' => SiteSettings::DefaultFooterText,
             'site_author' => SiteSettings::DefaultSiteName,

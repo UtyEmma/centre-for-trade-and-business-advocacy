@@ -41,7 +41,7 @@ final class Site
             'seo.site_name' => self::value($siteSettings->site_name) ?? config('app.name'),
             'seo.sitemap' => self::value($seoSettings->sitemap),
             'seo.favicon' => self::assetUrl($siteSettings->favicon, '/assets/img/logo/favicon.png'),
-            'seo.title.suffix' => self::value($seoSettings->title_suffix) ?? (' | '.self::name($siteSettings)),
+            'seo.title.suffix' => $seoSettings->title_suffix ?? (' - '.self::name($siteSettings)),
             'seo.title.homepage_title' => null,
             'seo.description.fallback' => self::value($seoSettings->default_description) ?? self::value($siteSettings->tagline),
             'seo.image.fallback' => $ogImageUrl,

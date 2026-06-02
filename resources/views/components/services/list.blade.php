@@ -21,13 +21,14 @@
                     <p class="line-clamp-3! mb-5! text-gray-500! group-hover:text-white/80!">{{$service->summary}}</p>
 
                     <div class="tp-cn-service-item-btn mb-0!">
-                        <a class="tp-btn tp-btn-border tp-btn-switch-animation" href="{{ route('services.show', $service) }}">
+                        <x-button as="a"  href="{{ route('services.show', $service) }}" variant="outline">Read More</x-button>
+                        {{-- <a class="tp-btn tp-btn-border tp-btn-switch-animation" href="{{ route('services.show', $service) }}">
                             <span class="d-flex align-items-center justify-content-center">
                             <span class="btn-text">Read more</span>
                             <i class="btn-icon"></i>
                             <i class="btn-icon"></i>
                             </span>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>

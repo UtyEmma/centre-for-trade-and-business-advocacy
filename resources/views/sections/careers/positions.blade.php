@@ -13,7 +13,7 @@
                         @forelse ($jobs as $job)                        
                             <x-career.item :job="$job" />  
                         @empty
-                            <p class="text-white">No available job listings at the moment. Please check back later</p>
+                            <p class="text-white text-center">No available job listings at the moment. Please check back later</p>
                         @endforelse
                     </div>
                 </div>

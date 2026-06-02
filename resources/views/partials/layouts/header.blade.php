@@ -175,8 +175,8 @@
                                     <ul class="tp-submenu submenu bg-white!">
                                         <li><a href="{{ route('services') }}">What We Do</a></li>
                                         <li><a href="{{ route('case-studies') }}">Case Studies</a></li>
-                                        <li><a href="{{ route('events') }}">Events</a></li>
-                                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
+                                        <li><a href="{{ route('events') }}">Our Events</a></li>
+                                        <li><a href="{{ route('gallery') }}">Our Gallery</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-dropdown">

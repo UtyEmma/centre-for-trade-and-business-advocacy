@@ -29,7 +29,7 @@
 
 <body class="theme-finance">
 
-    <div id="loading">
+    {{-- <div id="loading">
       <div class="loader-mask">
          <li class="tp-fading-circle">
             <div class="tp-circle1 tp-circle"></div>
@@ -45,9 +45,9 @@
             <div class="tp-circle11 tp-circle"></div>
             <div class="tp-circle12 tp-circle"></div>
          </li>
-         {{-- <h3 class="loading-title">{{ env('APP_NAME') }}</h3> --}}
       </div>
-    </div>
+   </div> --}}
+   {{-- <h3 class="loading-title">{{ env('APP_NAME') }}</h3> --}}
    <!-- Loader End -->
 
 
