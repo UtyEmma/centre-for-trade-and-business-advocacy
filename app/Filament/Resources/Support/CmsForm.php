@@ -36,7 +36,7 @@ final class CmsForm
             ->label($label)
             ->collection($collection)
             ->image()
-            ->optimize(config('app.image_format'))
+            // ->optimize(config('app.image_format'))
             ->multiple($multiple)
             ->imageEditor()
             ->reorderable($multiple);

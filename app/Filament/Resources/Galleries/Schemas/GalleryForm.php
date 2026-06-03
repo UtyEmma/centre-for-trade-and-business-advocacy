@@ -31,7 +31,7 @@ final class GalleryForm
                             ->acceptedFileTypes(['image/*', 'video/*'])
                             ->multiple()
                             ->panelLayout('grid')
-                            ->optimize(config('app.image_format'))
+                            // ->optimize(config('app.image_format'))
                             ->panelAspectRatio('2:1')
                             ->preserveFilenames()
                             ->imagePreviewHeight('400')
