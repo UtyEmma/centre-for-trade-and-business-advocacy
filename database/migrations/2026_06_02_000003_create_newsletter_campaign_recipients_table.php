@@ -23,8 +23,8 @@ return new class extends Migration
             $table->timestamp('failed_at')->nullable()->index();
             $table->timestamps();
 
-            $table->unique(['newsletter_campaign_id', 'email']);
-            $table->index(['newsletter_campaign_id', 'status']);
+            $table->unique(['newsletter_campaign_id', 'email'], 'campaign_email');
+            $table->index(['newsletter_campaign_id', 'status'], 'campaign_status');
         });
     }
 
