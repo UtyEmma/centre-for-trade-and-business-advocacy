@@ -10,11 +10,7 @@ trait IsPublishable {
     public static function bootIsPublishable() {
         if(!request()->is('admin/*')) {
             static::addGlobalScope('published', fn($query) => $query->published());
-            $attr = new static;
-
-            if($attr->hasAttribute('published_at')) {
-                static::addGlobalScope('latestPublished', fn($query) => $query->latest('published_at'));
-            }
+            static::addGlobalScope('latestPublished', fn($query) => $query->orderByPublishDate());
         }
     }
 
@@ -43,6 +39,12 @@ trait IsPublishable {
 
     function unpublish(){
         $this->update([ 'is_published' => false ]);
+    }
+
+    function scopeOrderByPublishDate(Builder $query){
+        if($this->hasAttribute('published_at')) {
+            $query->latest('published_at');
+        }
     }
 
 }
