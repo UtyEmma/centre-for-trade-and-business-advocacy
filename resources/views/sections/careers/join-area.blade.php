@@ -30,16 +30,16 @@
                     <p>Centre for Trade and Business Environment Advocacy</p>
                     <div class="tp-career-join-gallery-box">
                         <div class="tp-career-join-gallery-thumb-1">
-                            <img class="radius-6" src="assets/img/finance/career/thumb-1.jpg" alt="">
+                            <img loading="lazy" class="radius-6" src="assets/img/finance/career/thumb-1.jpg" alt="">
                         </div>
                         <div class="tp-career-join-gallery-thumb-2">
-                            <img class="radius-6" src="assets/img/finance/career/thumb-2.jpg" alt="">
+                            <img loading="lazy" class="radius-6" src="assets/img/finance/career/thumb-2.jpg" alt="">
                         </div>
                         <div class="tp-career-join-gallery-thumb-3">
-                            <img class="radius-6" src="assets/img/finance/career/thumb-3.jpg" alt="">
+                            <img loading="lazy" class="radius-6" src="assets/img/finance/career/thumb-3.jpg" alt="">
                         </div>
                         <div class="tp-career-join-gallery-thumb-4">
-                            <img class="radius-6" src="assets/img/finance/career/thumb-4.jpg" alt="">
+                            <img loading="lazy" class="radius-6" src="assets/img/finance/career/thumb-4.jpg" alt="">
                         </div>
                     </div>
                 </div>

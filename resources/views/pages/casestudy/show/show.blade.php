@@ -20,7 +20,7 @@
                         <div class="tp-case-studies-details-ii-wrap mb-50">
                             <div class="tp-case-studies-details-ii-right mb-30">
                                 <div class="tp-case-studies-details-ii-thumb">
-                                <img class="radius-6 w-100" src="{{ $caseStudy->image }}" alt="{{ $caseStudy->title }}">
+                                <img loading="lazy" class="radius-6 w-100" src="{{ $caseStudy->image }}" alt="{{ $caseStudy->title }}">
                                 </div>
                             </div>
                         </div>

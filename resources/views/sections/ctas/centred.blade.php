@@ -22,6 +22,6 @@
         </div>
     </div>
     <div class="tp-fa-cta-thumb">
-        <img src="{{ asset('assets/img/advisory/cta/thumb.jpg') }}" alt="">
+        <img loading="lazy" src="{{ asset('assets/img/advisory/cta/thumb.jpg') }}" alt="">
     </div>
 </div>

@@ -11,7 +11,7 @@
 ])
 
 {{-- bg-[#333] bg-blend-multiply --}}
-<div class="tp-breadcrumb-ptb pt-90 pb-70 z-index-1 {{ $overlay ? 'bg-secondary bg-blend-multiply' : '' }} bg-center bg-cover" style="background-image: url('{{ $image }}');">
+<div class="tp-breadcrumb-ptb pt-90 pb-70 z-index-1 {{ $overlay ? 'bg-secondary bg-blend-multiply' : '' }} bg-center bg-cover" data-background="{{ $image }}">
     {{-- <div class="tp-cc-chose-bg">
         <img src="{{ $image }}" alt="">
     </div> --}}

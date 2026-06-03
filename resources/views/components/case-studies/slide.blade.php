@@ -1,6 +1,6 @@
 <div class="tp-cc-project-item p-relative">
     <div class="tp-cc-project-item-thumb">
-        <img class="radius-6 aspect-3/4 object-cover" src="{{ $caseStudy->image }}" alt="{{ $caseStudy->title }}">
+        <img loading="lazy" class="radius-6 aspect-3/4 object-cover" src="{{ $caseStudy->image }}" alt="{{ $caseStudy->title }}">
     </div>
     <div class="tp-cc-project-item-box">
     <div class="tp-cc-project-item-content">

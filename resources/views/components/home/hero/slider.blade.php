@@ -32,10 +32,10 @@
 <div class="swiper-slide">
     <div class="tp-at-hero-item p-relative pt-170 pb-90">
         <div class="tp-at-hero-item-thumb">
-            <img src="{{ $image }}" alt="{{ $headline }}">
+            <img loading="lazy" src="{{ $image }}" alt="{{ $headline }}">
         </div>
         <div class="tp-cn-hero-bg tp-fade-anim" data-delay=".4" data-fade-from="left">
-            <img src="{{ asset('assets/img/consulting/hero/bg-shape.png') }}" alt="">
+            <img loading="lazy" src="{{ asset('assets/img/consulting/hero/bg-shape.png') }}" alt="">
         </div>
         <div class="container col-md-10 mx-auto">
             <div class="row">

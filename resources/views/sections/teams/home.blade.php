@@ -38,7 +38,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 tp-fade-anim" data-delay=".3">
                 <div class="tp-fi-team-item mb-30 p-relative">
                     <div class="tp-fi-team-item-thumb">
-                        <img src="assets/img/finance/team/team-1.jpg" alt="">
+                        <img loading="lazy" src="assets/img/finance/team/team-1.jpg" alt="">
                     </div>
                     <div class="tp-fi-team-item-content pb-200">
                         <h3 class="tp-fi-team-item-title"><a class="tp-line-anim" href="team-details.html">Diane
@@ -84,7 +84,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 tp-fade-anim" data-delay=".5">
                 <div class="tp-fi-team-item mb-30 p-relative">
                     <div class="tp-fi-team-item-thumb">
-                        <img src="assets/img/finance/team/team-2.jpg" alt="">
+                        <img loading="lazy" src="assets/img/finance/team/team-2.jpg" alt="">
                     </div>
                     <div class="tp-fi-team-item-content pb-200">
                         <h3 class="tp-fi-team-item-title"><a class="tp-line-anim" href="team-details.html">Sergio
@@ -130,7 +130,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 tp-fade-anim" data-delay=".7">
                 <div class="tp-fi-team-item mb-30 p-relative">
                     <div class="tp-fi-team-item-thumb">
-                        <img src="assets/img/finance/team/team-3.jpg" alt="">
+                        <img loading="lazy" src="assets/img/finance/team/team-3.jpg" alt="">
                     </div>
                     <div class="tp-fi-team-item-content pb-200">
                         <h3 class="tp-fi-team-item-title"><a class="tp-line-anim" href="team-details.html">Nomad
@@ -176,7 +176,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 tp-fade-anim" data-delay=".9">
                 <div class="tp-fi-team-item mb-30 p-relative">
                     <div class="tp-fi-team-item-thumb">
-                        <img src="assets/img/finance/team/team-4.jpg" alt="">
+                        <img loading="lazy" src="assets/img/finance/team/team-4.jpg" alt="">
                     </div>
                     <div class="tp-fi-team-item-content pb-200">
                         <h3 class="tp-fi-team-item-title"><a class="tp-line-anim" href="team-details.html">Shanto

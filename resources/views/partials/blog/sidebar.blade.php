@@ -23,7 +23,7 @@
     {{-- <div class="tp-sidebar-widget mb-45">
         <div class="tp-sidebar-widget-author-item text-center">
             <div class="tp-sidebar-widget-author-thumb mb-20">
-                <img src="assets/img/blog/user.jpg" alt="">
+                <img loading="lazy" src="assets/img/blog/user.jpg" alt="">
             </div>
             <div class="tp-sidebar-widget-author-content pb-10">
                 <h3 class="tp-sidebar-widget-author-name">David Brown</h3>

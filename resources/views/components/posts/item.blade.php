@@ -1,7 +1,7 @@
 <div class="tp-cc-blog-item mb-30 p-relative tp-fade-anim">
     <div class="tp-cc-blog-item-thumb radius-6">
         <a href="{{ route('blog.show', $post) }}">
-            <img class="radius-6 h-64! w-full object-cover" src="{{ $post->image }}" alt="{{ $post->title }}">
+            <img loading="lazy" class="radius-6 h-64! w-full object-cover" src="{{ $post->image }}" alt="{{ $post->title }}">
         </a>
     </div>
     

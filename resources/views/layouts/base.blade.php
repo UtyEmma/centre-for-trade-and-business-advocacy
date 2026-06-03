@@ -69,7 +69,7 @@
          <div class="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div class="tp-offcanvas-logo">
                <a href="{{ route('home') }}">
-                  <img class="logo-1" data-width="120" src="{{ $siteLogoUrl ?? asset('assets/img/logo/logo.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
+                  <img loading="lazy" class="logo-1" data-width="120" src="{{ $siteLogoUrl ?? asset('assets/img/logo/logo.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
                </a>
             </div>
             <div class="tp-offcanvas-close">
@@ -98,21 +98,21 @@
                   <div class="col-md-4 col-3">
                      <div class="tp-offcanvas-gallery-img fix">
                         <a class="popup-image" href="assets/img/blog/recent-thumb-1.jpg">
-                           <img src="assets/img/blog/recent-thumb-1.jpg" alt="">
+                           <img loading="lazy" src="assets/img/blog/recent-thumb-1.jpg" alt="">
                         </a>
                      </div>
                   </div>
                   <div class="col-md-4 col-3">
                      <div class="tp-offcanvas-gallery-img fix">
                         <a class="popup-image" href="assets/img/blog/recent-thumb-2.jpg">
-                           <img src="assets/img/blog/recent-thumb-2.jpg" alt="">
+                           <img loading="lazy" src="assets/img/blog/recent-thumb-2.jpg" alt="">
                         </a>
                      </div>
                   </div>
                   <div class="col-md-4 col-3">
                      <div class="tp-offcanvas-gallery-img fix">
                         <a class="popup-image" href="assets/img/blog/recent-thumb-3.jpg">
-                           <img src="assets/img/blog/recent-thumb-3.jpg" alt="">
+                           <img loading="lazy" src="assets/img/blog/recent-thumb-3.jpg" alt="">
                         </a>
                      </div>
                   </div>

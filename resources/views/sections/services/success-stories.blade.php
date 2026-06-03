@@ -36,14 +36,14 @@
                         </div>
                     </div>
                     <div class="tp-cn-success-item-shape">
-                        <img src="assets/img/consulting/success/bg-shape.png" alt="">
+                        <img loading="lazy" src="assets/img/consulting/success/bg-shape.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="tp-cn-success-item-2 mb-30" data-background="assets/img/consulting/success/thumb-1.jpg">
                     <div class="tp-cn-success-item-2-shape">
-                        <img src="assets/img/consulting/success/shape.png" alt="">
+                        <img loading="lazy" src="assets/img/consulting/success/shape.png" alt="">
                     </div>
                     <div class="tp-cn-success-item-2-content" data-bg-color="#CEF79E">
                         <span class="tp-cn-success-item-2-title">Superb consulting</span>

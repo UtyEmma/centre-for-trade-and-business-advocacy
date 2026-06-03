@@ -2,7 +2,7 @@
     @if ($caseStudy->image)
         <div class="tp-case-studies-item-thumb fix mb-30 radius-6">
             <a href="{{ route('case-studies.show', $caseStudy) }}">
-                <img class="radius-6" src="{{ $caseStudy->image }}" alt="">
+                <img loading="lazy" class="radius-6" src="{{ $caseStudy->image }}" alt="">
             </a>
         </div>
     @endif

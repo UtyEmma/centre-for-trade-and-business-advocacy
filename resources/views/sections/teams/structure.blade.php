@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="tp-cc-fact-thumb">
-                                    <img class="radius-6" src="assets/img/corporate/service/fact-1.jpg" alt="">
+                                    <img loading="lazy" class="radius-6" src="assets/img/corporate/service/fact-1.jpg" alt="">
                                 </div>
                             </div>
                         </div>

@@ -12,7 +12,7 @@
             <div class="col-lg-4 col-md-6">
                <div class="tp-contact-city-item text-center mb-30">
                   <div class="tp-contact-city-item-thumb">
-                     <img src="assets/img/advisory/contact/city-1.jpg" alt="">
+                     <img loading="lazy" src="assets/img/advisory/contact/city-1.jpg" alt="">
                   </div>
                   <div class="tp-contact-city-item-content">
                      <h3 class="tp-contact-city-item-title">Washington, D.C.</h3>
@@ -30,7 +30,7 @@
             <div class="col-lg-4 col-md-6">
                <div class="tp-contact-city-item text-center mb-30">
                   <div class="tp-contact-city-item-thumb">
-                     <img src="assets/img/advisory/contact/city-2.jpg" alt="">
+                     <img loading="lazy" src="assets/img/advisory/contact/city-2.jpg" alt="">
                   </div>
                   <div class="tp-contact-city-item-content">
                      <h3 class="tp-contact-city-item-title">Los Angeles City</h3>
@@ -48,7 +48,7 @@
             <div class="col-lg-4 col-md-6">
                <div class="tp-contact-city-item text-center mb-30">
                   <div class="tp-contact-city-item-thumb">
-                     <img src="assets/img/advisory/contact/city-3.jpg" alt="">
+                     <img loading="lazy" src="assets/img/advisory/contact/city-3.jpg" alt="">
                   </div>
                   <div class="tp-contact-city-item-content">
                      <h3 class="tp-contact-city-item-title">New York City</h3>

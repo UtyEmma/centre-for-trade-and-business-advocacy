@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'image_format' => env('IMAGE_CONVERSION_FORMAT', 'webp')
+
 ];

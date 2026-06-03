@@ -25,7 +25,7 @@
                   <div class="tp-footer-widget footer-col-6-1 mb-90">
                      <div class="tp-footer-logo mb-35">
                         <a href="{{ route('home') }}">
-                           <img data-width="130" src="{{ $siteFooterLogoUrl ?? $siteLogoUrl ?? asset('assets/img/logo/citrus-logo-white.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
+                           <img loading="lazy" data-width="130" src="{{ $siteFooterLogoUrl ?? $siteLogoUrl ?? asset('assets/img/logo/citrus-logo-white.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
                         </a>
                      </div>
                      @if (filled($siteSettings->footer_text ?? null))

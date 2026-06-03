@@ -4,7 +4,7 @@
                 <div class="col-lg-6">
                     <div class="tp-fi-value-thumb-wrapper p-relative  mb-30 mt-30">
                         <div class="tp-fi-value-thumb-main">
-                            <img src="assets/img/finance/value/thumb-1.jpg" alt="">
+                            <img loading="lazy" src="assets/img/finance/value/thumb-1.jpg" alt="">
                         </div>
                         <div class="tp-fi-value-graph p-relative tp-fade-anim">
                             <div class="tp-fi-value-graph-icon">

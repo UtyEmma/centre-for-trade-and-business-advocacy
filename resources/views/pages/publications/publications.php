@@ -8,7 +8,7 @@ use Livewire\Component;
 
 new class extends Component {
 
-    #[Url()]
+    #[Url]
     public $search = '';
     
     public PublicationType $publicationType;

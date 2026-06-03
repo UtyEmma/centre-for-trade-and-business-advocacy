@@ -22,7 +22,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-1.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-1.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-2.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-2.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-3.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-3.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-4.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-4.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-5.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-5.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -122,7 +122,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-1.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-1.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-2.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-2.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="tp-at-testimonial-user d-flex align-items-center gap-3">
                            <div class="tp-at-testimonial-user-img">
-                              <img src="assets/img/accounting/testimonial/user-3.jpg" alt="">
+                              <img loading="lazy" src="assets/img/accounting/testimonial/user-3.jpg" alt="">
                            </div>
                            <div class="tp-at-testimonial-user-info">
                               <h3 class="tp-at-testimonial-user-name">Cristopher Miller</h3>
@@ -435,42 +435,42 @@
                            <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
                                  </div>
                               </div>
                               <div class="swiper-slide">
                                  <div class="tp-fi-testimonial-slider-thumb">
-                                    <img src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
+                                    <img loading="lazy" src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
                                  </div>
                               </div>
                            </div>
@@ -582,7 +582,7 @@
                      <div class="d-flex justify-content-lg-end  tp-fade-anim" data-delay=".7">
                         <div class="tp-fi-faq-support p-relative" data-bg-color="#F7F7F5">
                            <div class="tp-fi-faq-support-shape">
-                              <img src="assets/img/finance/banner/faq-bg.png" alt="">
+                              <img loading="lazy" src="assets/img/finance/banner/faq-bg.png" alt="">
                            </div>
                            <h3 class="tp-fi-faq-support-title">Hey, do you have any <br> more questions?</h3>
                            <div class="tp-fi-faq-support-list pb-60">

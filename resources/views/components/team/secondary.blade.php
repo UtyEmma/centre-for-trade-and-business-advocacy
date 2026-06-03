@@ -7,7 +7,7 @@
             <p>{{ $teamMember->role }}</p>
         </div>
         <div class="tp-cc-team-item-thumb">
-            <img class="radius-6 aspect-3/4 object-cover" src="{{ $teamMember->image }}" alt="">
+            <img loading="lazy" class="radius-6 aspect-3/4 object-cover" src="{{ $teamMember->image }}" alt="">
             <div class="tp-cc-team-social ">
                 <span class="tp-cc-team-social-link">
                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">

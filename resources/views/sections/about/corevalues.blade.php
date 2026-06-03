@@ -18,7 +18,7 @@
             <div class="col-lg-6">
                 <div class="tp-fi-value-thumb-wrapper p-relative  mb-30 mt-30">
                     <div class="tp-fi-value-thumb-main tp-fade-anim" data-fade-from="left">
-                        <img src="{{ asset('assets/images/about/ctba-group-meeting-about-us.png') }}" alt="">
+                        <img loading="lazy" src="{{ asset('assets/images/about/ctba-group-meeting-about-us.png') }}" alt="">
                     </div>
                 </div>
             </div>

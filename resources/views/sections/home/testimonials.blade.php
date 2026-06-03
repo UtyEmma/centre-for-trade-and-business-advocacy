@@ -67,7 +67,7 @@
                                 @forelse ($testimonials as $testimonial)
                                     <div class="swiper-slide">
                                         <div class="tp-fi-testimonial-slider-thumb">
-                                            <img src="{{ $testimonial->image }}" class="aspect-square! object-cover" alt="{{ $testimonial->name }}">
+                                            <img loading="lazy" src="{{ $testimonial->image }}" class="aspect-square! object-cover" alt="{{ $testimonial->name }}">
                                         </div>
                                     </div>
                                 @empty

@@ -2,7 +2,7 @@
     @if ($post->image)
         <div class="tp-cc-blog-item-thumb radius-6 mb-5!">
             <a href="{{ route('blog.show', $post) }}">
-                <img class="radius-6 h-96! object-cover" src="{{ $post->image }}" alt="{{ $post->title }}">
+                <img loading="lazy" class="radius-6 h-96! object-cover" src="{{ $post->image }}" alt="{{ $post->title }}">
             </a>
         </div>
     @endif

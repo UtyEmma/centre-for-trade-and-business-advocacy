@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="tp-about-thumb-wrap h-100  mb-30 tp-fade-anim" data-fade-from="left">
-                        <img class="radius-6 aspect-3/4 object-cover" src="{{ asset('assets/images/about/ctba-lady-portrait-who-we-are.png') }}"  alt="">
+                        <img loading="lazy" class="radius-6 aspect-3/4 object-cover" src="{{ asset('assets/images/about/ctba-lady-portrait-who-we-are.png') }}"  alt="">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -33,7 +33,7 @@
                         <div class="row align-items-center">
                             {{-- <div class="col-lg-5">
                                 <div class="tp-about-thumb mb-30 tp-fade-anim" data-delay=".5" data-fade-from="left">
-                                    <img class="radius-6" src="assets/img/finance/about/about-2.jpg" alt="">
+                                    <img loading="lazy" class="radius-6" src="assets/img/finance/about/about-2.jpg" alt="">
                                 </div>
                             </div> --}}
                             <div>

@@ -6,13 +6,13 @@
 
 <div class="tp-fi-banner-ptb">
     <div class="tp-fi-banner-wrapper p-relative fix">
-        <img src="{{ $image }}" class="w-full object-cover md:h-[90vh]!" alt="">
+        <img loading="lazy" src="{{ $image }}" class="w-full object-cover md:h-[90vh]!" alt="">
         <div class="tp-fi-banner-content tp-fade-anim" data-delay=".5" data-fade-from="right">
             <h3 class="tp-fi-banner-title font-medium">{{ $headline }}</h3>
             <p class="text-justify">{{ $description }}</p>
         </div>
         <div class="tp-cn-success-item-2-shape">
-            <img src="assets/img/consulting/success/shape.png" alt="">
+            <img loading="lazy" src="assets/img/consulting/success/shape.png" alt="">
         </div>
     </div>
 </div>

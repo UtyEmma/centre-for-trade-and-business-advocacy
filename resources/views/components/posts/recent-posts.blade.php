@@ -11,7 +11,7 @@
                     <div class="rc-post-item border-b-0! d-flex gap-1! align-items-center">
                         <div class="rc-post-thumb me-2 w-1/4 ">
                             <a href="{{ route('blog.show', $post) }}">
-                                <img src="{{ $post->image }}" class="object-cover aspect-square" alt="{{ $post->title }}">
+                                <img loading="lazy" src="{{ $post->image }}" class="object-cover aspect-square" alt="{{ $post->title }}">
                             </a>
                         </div>
                         <div class="rc-post-content">

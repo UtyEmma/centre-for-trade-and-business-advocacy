@@ -21,7 +21,7 @@
 
     {{-- <div class="tp-fi-banner-ptb">
         <div class="tp-fi-banner-wrapper">
-            <img src="assets/img/finance/banner/banner-bg-2.jpg" alt="">
+            <img loading="lazy" src="assets/img/finance/banner/banner-bg-2.jpg" alt="">
         </div>
         <div class="tp-fi-banner-wrap" data-bg-color="#222F30">
             <div class="container">

@@ -17,7 +17,7 @@
             <div class="row gap-10">
                 <div class="col-lg-4">
                     <div class="tp-team-details-thumb mb-30 tp-fade-anim" data-fade-from="left">
-                        <img class="radius-6 aspect-3/4 object-cover" src="{{ $teamMember->image }}" alt="">
+                        <img loading="lazy" class="radius-6 aspect-3/4 object-cover" src="{{ $teamMember->image }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7">

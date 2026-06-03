@@ -24,9 +24,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="tp-fi-cta-thumb p-relative text-lg-end tp-fade-anim" data-fade-from="right">
-                            <img class="radius-6" src="assets/img/finance/cta/cta-thumb.jpg" alt="">
+                            <img loading="lazy" class="radius-6" src="assets/img/finance/cta/cta-thumb.jpg" alt="">
                             <div class="tp-fi-cta-thumb-shape">
-                                <img src="assets/img/finance/cta/shape.svg" alt="">
+                                <img loading="lazy" src="assets/img/finance/cta/shape.svg" alt="">
                             </div>
                         </div>
                     </div>

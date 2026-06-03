@@ -13,7 +13,7 @@ new class extends Component {
 
     #[Computed]
     function caseStudies(){
-        return CaseStudy::where('title', 'LIKE', "%{$this->search}%")->latest()->paginate();
+        return CaseStudy::whereLike('title', "%{$this->search}%")->latest()->paginate();
     }
 
 };

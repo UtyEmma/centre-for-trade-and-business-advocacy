@@ -40,14 +40,14 @@
                         </div>
                     </div>
                     <div class="tp-cn-success-item-shape">
-                        <img src="{{ asset('assets/img/consulting/success/bg-shape.png') }}" alt="">
+                        <img loading="lazy" src="{{ asset('assets/img/consulting/success/bg-shape.png') }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="tp-cn-success-item-2 mb-30" data-background="{{ asset('assets/img/consulting/success/thumb-1.jpg') }}">
                     <div class="tp-cn-success-item-2-shape">
-                        <img src="{{ asset('assets/img/consulting/success/shape.png') }}" alt="">
+                        <img loading="lazy" src="{{ asset('assets/img/consulting/success/shape.png') }}" alt="">
                     </div>
                     <div class="tp-cn-success-item-2-content tp-fade-anim" data-delay=".5" data-fade-from="right"
                         data-bg-color="#CEF79E">

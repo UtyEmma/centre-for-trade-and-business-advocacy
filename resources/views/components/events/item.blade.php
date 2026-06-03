@@ -1,7 +1,7 @@
 <div class="tp-blog-item p-relative">
     <div class="tp-blog-item-img mb-20 p-relative">
         <a href="{{ route('events.show', $event) }}">
-            <img class="radius-6 h-52! object-cover" src="{{ $event->image }}" alt="">
+            <img loading="lazy" class="radius-6 h-52! object-cover" src="{{ $event->image }}" alt="">
         </a>
     </div>
     <div class="tp-blog-item-content">

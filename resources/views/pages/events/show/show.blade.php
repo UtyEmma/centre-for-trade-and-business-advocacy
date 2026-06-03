@@ -13,7 +13,7 @@
 
     <div class="md:my-20! md:flex col-md-10 mx-auto gap-10!">
         <div class="md:w-[40%]">
-            <img class="w-full rounded top-36 sticky" src="{{ $event->image }}" alt="">
+            <img loading="lazy" class="w-full rounded top-36 sticky" src="{{ $event->image }}" alt="">
         </div>
 
         <div class="flex-1">

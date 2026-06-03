@@ -4,7 +4,7 @@
 ])
 <div class="tp-fi-banner-ptb">
     <div class="tp-fi-banner-wrapper">
-        <img src="{{ $image }}" class="h-96! w-full object-cover" alt="">
+        <img loading="lazy" src="{{ $image }}" class="h-96! w-full object-cover" alt="">
     </div>
     <div class="tp-fi-banner-wrap" data-bg-color="#222F30">
         <div class="container">

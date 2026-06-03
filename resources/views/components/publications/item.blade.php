@@ -10,7 +10,7 @@
     <div class="flex flex-col md:flex-row gap-3">
         @if ($image)
             <div class="shrink-0 md:w-1/4 tp-at-download-item-thumb mb-30">
-                <img class="radius-6 aspect-square! object-cover" src="{{ $image }}" alt="">
+                <img loading="lazy" class="radius-6 aspect-square! object-cover" src="{{ $image }}" alt="">
             </div>
         @endif
 

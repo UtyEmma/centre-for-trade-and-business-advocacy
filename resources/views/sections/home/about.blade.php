@@ -48,7 +48,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="tp-fi-about-thumb-wrap p-relative text-xl-end mb-30">
-                    <img src="{{ $image }}" class="aspect-square! object-cover" alt="">
+                    <img loading="lazy" src="{{ $image }}" class="aspect-square! object-cover" alt="">
 
                     <div class="tp-fi-about-list tp-fade-anim" data-delay=".7">
                         @forelse ($features as $feature)

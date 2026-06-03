@@ -14,7 +14,7 @@
             <div class="col-lg-12">
                <div class="tp-fa-about-thumb-wrapper p-relative radius-6">
                   <div class="tp-fa-about-shape">
-                     <img src="assets/img/advisory/about/thumb-2.png" alt="">
+                     <img loading="lazy" src="assets/img/advisory/about/thumb-2.png" alt="">
                   </div>
                   <video loop="" muted="" autoplay="" playsinline="">
                      <source src="https://html.aqlova.com/videos/consora/advisory-about.mp4" type="video/mp4">
@@ -74,10 +74,10 @@
                   </div>
                   <div class="tp-at-service-thumb-wrap d-flex gap-3">
                      <div class="tp-at-service-thumb">
-                        <img class="radius-6" src="{{ asset('assets/img/accounting/service/thumb-1.jpg') }}" alt="service">
+                        <img loading="lazy" class="radius-6" src="{{ asset('assets/img/accounting/service/thumb-1.jpg') }}" alt="service">
                      </div>
                      <div class="tp-at-service-thumb">
-                        <img class="radius-6" src="{{ asset('assets/img/accounting/service/thumb-2.jpg') }}" alt="service">
+                        <img loading="lazy" class="radius-6" src="{{ asset('assets/img/accounting/service/thumb-2.jpg') }}" alt="service">
                      </div>
                   </div>
                </div>
@@ -493,42 +493,42 @@
                      <div class="swiper-wrapper">
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-1.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-2.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-3.jpg" alt="">
                            </div>
                         </div>
                         <div class="swiper-slide">
                            <div class="tp-fi-testimonial-slider-thumb">
-                              <img src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
+                              <img loading="lazy" src="assets/img/finance/testimonial/thumb-4.jpg" alt="">
                            </div>
                         </div>
                      </div>
@@ -591,14 +591,14 @@
                      </div>
                   </div>
                   <div class="tp-cn-success-item-shape">
-                     <img src="assets/img/consulting/success/bg-shape.png" alt="">
+                     <img loading="lazy" src="assets/img/consulting/success/bg-shape.png" alt="">
                   </div>
                </div>
             </div>
             <div class="col-lg-6">
                <div class="tp-cn-success-item-2 mb-30" data-background="assets/img/consulting/success/thumb-1.jpg">
                   <div class="tp-cn-success-item-2-shape">
-                     <img src="assets/img/consulting/success/shape.png" alt="">
+                     <img loading="lazy" src="assets/img/consulting/success/shape.png" alt="">
                   </div>
                   <div class="tp-cn-success-item-2-content tp-fade-anim" data-delay=".5" data-fade-from="right"
                      data-bg-color="#CEF79E">

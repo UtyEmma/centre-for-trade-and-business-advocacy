@@ -12,7 +12,7 @@
                   </div>
 
                   <div >
-                     <img class="radius-6 tp-fade-anim aspect-video w-full object-cover" data-delay=".7" src="{{ $service->image }}" alt="{{ $service->title }}" />
+                     <img loading="lazy" class="radius-6 tp-fade-anim aspect-video w-full object-cover" data-delay=".7" src="{{ $service->image }}" alt="{{ $service->title }}" />
                   </div>
                   {{-- <div class="tp-fade-anim" data-delay=".7">
                      <x-button as="a" href="{{ route('contact') }}" >Get Started</x-button>

@@ -47,10 +47,10 @@
                 <div class="col-lg-6">
                     <div class="tp-fi-partner-thumb-wrap text-lg-end p-relative fix mb-30">
                         <div class="main-thumb">
-                            <img class="radius-6" src="assets/img/finance/partner/thumb-1.jpg" alt="">
+                            <img loading="lazy" class="radius-6" src="assets/img/finance/partner/thumb-1.jpg" alt="">
                         </div>
                         <div class="shape-1">
-                            <img src="assets/img/finance/partner/brand-1.png" alt="">
+                            <img loading="lazy" src="assets/img/finance/partner/brand-1.png" alt="">
                         </div>
                         <div class="tp-fi-hero-shape">
                             <svg xmlns="http://www.w3.org/2000/svg" width="406" height="262" viewBox="0 0 406 262"

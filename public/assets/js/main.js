@@ -15,9 +15,36 @@
 
 
 	// Common Js//
-	$("[data-background]").each(function () {
-		$(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
-	});
+	var backgroundElements = $("[data-background]");
+	var applyBackgroundImage = function (element) {
+		var $element = $(element);
+		var backgroundImage = $element.attr("data-background");
+
+		if (backgroundImage) {
+			$element.css("background-image", "url(" + backgroundImage + ")");
+		}
+	};
+
+	if ("IntersectionObserver" in window) {
+		var backgroundObserver = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					applyBackgroundImage(entry.target);
+					observer.unobserve(entry.target);
+				}
+			});
+		}, {
+			rootMargin: "300px 0px"
+		});
+
+		backgroundElements.each(function () {
+			backgroundObserver.observe(this);
+		});
+	} else {
+		backgroundElements.each(function () {
+			applyBackgroundImage(this);
+		});
+	}
 
 	$("[data-width]").each(function () {
 		$(this).css("width", $(this).attr("data-width"));

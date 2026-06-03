@@ -178,7 +178,7 @@ new class extends Component
                                     <div class="postbox-details-comment-box d-flex">
                                         {{-- <div class="postbox-details-comment-info">
                                             <div class="postbox-details-comment-avater mr-20">
-                                                <img src="assets/img/blog/user-2.jpg" alt="">
+                                                <img loading="lazy" src="assets/img/blog/user-2.jpg" alt="">
                                             </div>
                                         </div> --}}
                                         <div class="postbox-details-comment-text">
@@ -211,7 +211,7 @@ new class extends Component
                                         <div class="postbox-details-comment-box d-flex">
                                             {{-- <div class="postbox-details-comment-info">
                                                 <div class="postbox-details-comment-avater mr-20">
-                                                    <img src="assets/img/blog/user-3.jpg" alt="">
+                                                    <img loading="lazy" src="assets/img/blog/user-3.jpg" alt="">
                                                 </div>
                                             </div> --}}
                                             <div class="postbox-details-comment-text">

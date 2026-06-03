@@ -36,7 +36,7 @@
         <div class="col-md-5">
             <div class="tp-success-item-thumb h-full! fix">
                 <a href="{{ route('services', $service) }}">
-                    <img class="radius-6 h-full! object-cover"  src="{{ $service->image }}" alt="" />
+                    <img loading="lazy" class="radius-6 h-full! object-cover"  src="{{ $service->image }}" alt="" />
                 </a>
             </div>
         </div>

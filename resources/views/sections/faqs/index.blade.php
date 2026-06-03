@@ -37,7 +37,7 @@
                 <div class="d-flex justify-content-lg-end tp-fade-anim" data-delay=".7">
                     <div class="tp-fi-faq-support p-relative" data-bg-color="#F7F7F5">
                         <div class="tp-fi-faq-support-shape">
-                            <img src="assets/img/finance/banner/faq-bg.png" alt="">
+                            <img loading="lazy" src="assets/img/finance/banner/faq-bg.png" alt="">
                         </div>
                         <h3 class="tp-fi-faq-support-title">{{ $ctaTitle }}</h3>
                         <div class="tp-fi-faq-support-list pb-60">

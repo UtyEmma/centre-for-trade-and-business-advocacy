@@ -18,7 +18,7 @@
                         <h3 class="tp-section-title col-md-10 mx-auto" data-text-split data-letters-fade-in>{{$post->title}}</h3>
                     </div> --}}
                     <div class="tp-blog-details-thumb">
-                        <img class="radius-6 md:h-[70vh] object-cover w-full" src="{{ $post->image }}" alt="">
+                        <img loading="lazy" class="radius-6 md:h-[70vh] object-cover w-full" src="{{ $post->image }}" alt="">
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                                 <h3 class="tp-blog-details-social-title fw-medium">AUTHORS:</h3>
                                 <div class="tp-at-testimonial-user d-flex align-items-center gap-3 mb-25">
                                     {{-- <div class="tp-at-testimonial-user-img">
-                                        <img src="assets/img/accounting/testimonial/user-3.jpg" alt="">
+                                        <img loading="lazy" src="assets/img/accounting/testimonial/user-3.jpg" alt="">
                                     </div> --}}
                                     <div class="tp-at-testimonial-user-info">
                                         <h3 class="tp-at-testimonial-user-name">{{ $post->author->name }}</h3>

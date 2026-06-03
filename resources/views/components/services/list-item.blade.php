@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="tp-cn-service-item-thumb h-full! w-[40%]!">
-        <img src="{{ $service->image }}" class="h-full!" alt="">
+        <img loading="lazy" src="{{ $service->image }}" class="h-full!" alt="">
         {{-- <div class="tp-cn-service-item-thumb-1">
         </div> --}}
     </div>

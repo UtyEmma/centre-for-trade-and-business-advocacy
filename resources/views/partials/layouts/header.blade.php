@@ -126,7 +126,7 @@
                     <div class="tp-header-left-side">
                         <div class="tp-header-logo">
                             <a href="{{ route('home') }}" >
-                                <img data-width="130" src="{{ $siteLogoUrl ?? asset('assets/img/logo/logo.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
+                                <img loading="lazy" data-width="130" src="{{ $siteLogoUrl ?? asset('assets/img/logo/logo.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
                             </a>
                         </div>
                     </div>
