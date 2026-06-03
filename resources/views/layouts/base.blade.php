@@ -153,7 +153,7 @@
 
     {{ $slot }}
 
-    @livewireScriptConfig 
+    {{-- @livewireScriptConfig  --}}
 
     <script src="{{ asset('assets/js/vendor/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap-bundle.js') }}"></script>

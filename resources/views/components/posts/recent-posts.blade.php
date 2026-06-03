@@ -3,7 +3,8 @@
     'title' => 'Recent Posts'
 ])
 
-<div class="tp-sidebar-widget mb-45">
+@if ($posts->isNotEmpty())
+    <div class="tp-sidebar-widget mb-45">
         <div class="tp-sidebar-widget-bg tp-sidebar-widget-category">
             <h3 class="tp-sidebar-widget-title">{{ $title }}</h3>
             <div class="rc-post-wrap flex  flex-col gap-3">
@@ -28,3 +29,4 @@
             </div>
         </div>
     </div>
+@endif

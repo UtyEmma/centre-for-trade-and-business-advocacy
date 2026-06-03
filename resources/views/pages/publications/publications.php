@@ -8,7 +8,7 @@ use Livewire\Component;
 
 new class extends Component {
 
-    #[Url]
+    #[Url()]
     public $search = '';
     
     public PublicationType $publicationType;
@@ -17,8 +17,9 @@ new class extends Component {
     function publications() {
         return $this->publicationType->publications()
                     ->when($this->search, function($query, $keyword) {
-                        $query->where('name', 'LIKE', "%{$keyword}%");
+                        $query->whereLike('title', "%{$keyword}%");
                     })
-                    ->published()->paginate();
+                    ->published()
+                    ->paginate();
     }
 };

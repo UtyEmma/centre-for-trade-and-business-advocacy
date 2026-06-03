@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('newsletter_campaign_recipients', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('newsletter_campaign_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('newsletter_subscriber_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('newsletter_campaign_id')->constrained(null, null, 'news_campaign_id_idx')->cascadeOnDelete();
+            $table->foreignId('newsletter_subscriber_id')->nullable()->constrained(null, null, 'news_subscriber_id_idx')->nullOnDelete();
             $table->string('email');
             $table->string('name')->nullable();
             $table->string('status')->default('pending')->index();

@@ -11,7 +11,7 @@
 ])
 
 {{-- bg-[#333] bg-blend-multiply --}}
-<div class="tp-breadcrumb-ptb pt-90 pb-70 z-index-1 {{ $overlay ? 'bg-secondary bg-blend-multiply' : '' }} bg-center bg-cover" data-background="{{ $image }}">
+<div wire:ignore class="tp-breadcrumb-ptb py-10! md:py-14!  z-index-1 {{ $overlay ? 'bg-secondary bg-blend-multiply' : '' }} bg-center bg-cover" data-background="{{ $image }}">
     {{-- <div class="tp-cc-chose-bg">
         <img src="{{ $image }}" alt="">
     </div> --}}
@@ -44,12 +44,9 @@
                                 </li>
                             @endif
                         @endforeach
-                        {{-- <li><a href="index-2.html">Home</a></li>
-                        <li>></li>
-                        <li>Testimonials</li> --}}
                     </ul>
-                    <h2 class="tp-breadcrumb-title text-5xl! leading-tight! text-white!">{{$title}}</h2>
-                    <p class="text-white text-base">{{ $description }}</p>
+                    <h2 class="tp-breadcrumb-title md:text-5xl! leading-tight! text-white!">{{$title}}</h2>
+                    <p class="text-white md:text-base">{{ $description }}</p>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
-<div class="tp-sidebar-wrapper mb-30">
-    <div class="tp-sidebar-widget mb-45">
+<div class="tp-sidebar-wrapper md:mb-[30px]!">
+    <div class="tp-sidebar-widget md:mb-[45px]!">
         <div class="tp-sidebar-search">
             <div>
                 <div class="tp-sidebar-search-input">

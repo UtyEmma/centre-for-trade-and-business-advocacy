@@ -32,7 +32,7 @@
 <!-- tp search area end -->
 
 
-<header class="tp-header-height">
+<header >
     @if ($siteSettings->address || $siteSettings->phone || !empty($siteSocialProfiles ?? []))
         <div class="tp-header-bottom d-none d-md-block" data-bg-color="#C9A24B">
             <div class="container container-1800 col-md-10 mx-auto">
