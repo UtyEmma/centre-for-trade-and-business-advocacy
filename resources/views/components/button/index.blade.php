@@ -9,6 +9,7 @@
         'primary' => 'tp-btn-event',
         'secondary' => 'tp-btn-event theme-bg-color',
         'outline' => 'tp-btn-event tp-btn-border',
+        'white' => 'tp-btn-event tp-btn-advisory-style tp-btn-border',
         default => 'tp-btn-event',
     };
 @endphp

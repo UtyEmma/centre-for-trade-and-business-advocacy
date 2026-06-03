@@ -32,16 +32,7 @@
                                 </a>
                             </div>
                             <div class="tp-fa-control-btn">
-                                <a class="tp-btn tp-btn-advisory-style tp-btn-border tp-btn-switch-animation"
-                                    href="{{ route('teams') }}">
-                                    <span class="d-flex align-items-center justify-content-center">
-                                        <span class="btn-text">
-                                            View all members
-                                        </span>
-                                        <i class="btn-icon"></i>
-                                        <i class="btn-icon"></i>
-                                    </span>
-                                </a>
+                                <x-button as="a" href="{{ route('teams') }}" variant="white" >View all members</x-button>
                             </div>
                         </div>
                     </div>

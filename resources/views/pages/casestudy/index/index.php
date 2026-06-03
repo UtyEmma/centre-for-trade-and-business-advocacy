@@ -2,13 +2,18 @@
 
 use App\Models\CaseStudy;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 
 new class extends Component {
-    
-    #[Computed()]
+
+
+    #[Url]
+    public $search = '';
+
+    #[Computed]
     function caseStudies(){
-        return CaseStudy::latest()->paginate();
+        return CaseStudy::where('title', 'LIKE', "%{$this->search}%")->latest()->paginate();
     }
 
 };

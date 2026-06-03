@@ -40,9 +40,7 @@
             @if ($this->galleryAssets->isNotEmpty())
                 <div class="gallery-masonry w-full mt-20" data-gallery-masonry>
                     <div class="gallery-masonry-sizer w-full md:w-[calc((100%_-_24px)/2)] xl:w-[calc((100%_-_48px)/3)]"></div>
-                {{-- <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 items-start" x-data  data-masonry> --}}
-                    <span x-init="console.log('Updated the text')"></span>
-                    @foreach ($this->galleryAssets as $galleryAsset)
+                  @foreach ($this->galleryAssets as $galleryAsset)
                         <x-gallery.item
                             :gallery-record="$galleryAsset['gallery']"
                             :media="$galleryAsset['media']"
@@ -53,8 +51,8 @@
                 {{-- </div> --}}
             @else
                 <div class="rounded-lg border border-dashed border-secondary/20 p-5! text-center md:p-10!">
-                    <h3 class="mb-2.5 text-[28px] font-extrabold text-secondary">No gallery files yet</h3>
-                    <p class="m-0 text-[#222f30]/70">Published gallery files will be shown here.</p>
+                    <h3 class="mb-2.5 text-[28px] font-extrabold text-secondary">No gallery items yet</h3>
+                    <p class="m-0 text-[#222f30]/70">Please check back later.</p>
                 </div>
             @endif
         </div>

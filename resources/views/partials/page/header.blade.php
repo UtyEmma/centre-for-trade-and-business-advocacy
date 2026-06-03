@@ -48,7 +48,7 @@
                         <li>></li>
                         <li>Testimonials</li> --}}
                     </ul>
-                    <h2 class="tp-breadcrumb-title text-5xl! text-white!">{{$title}}</h2>
+                    <h2 class="tp-breadcrumb-title text-5xl! leading-tight! text-white!">{{$title}}</h2>
                     <p class="text-white text-base">{{ $description }}</p>
                 </div>
             </div>
