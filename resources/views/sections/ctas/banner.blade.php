@@ -14,7 +14,7 @@
                 <div class="tp-cn-cta-content">
                 <h3 class="tp-section-title max-md:text-3xl! mb-20" data-text-split data-letters-fade-in>{{$headline}}</h3>
                 <div class="tp-fade-anim">
-                    <p class="text-black!">{{ $description }}</p>
+                    <p class="text-black! font-medium!">{{ $description }}</p>
                 </div>
                 <div class="tp-fi-partner-btn-wrap tp-fade-anim" data-delay=".5">
                     <x-button as="a" :href="$button['url']" :variant="$button['style']">
