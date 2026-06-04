@@ -20,15 +20,12 @@
     --bs-primary: var(--color-primary);
     --bs-secondary: var(--color-secondary);
 }
-@base {
 
-    /* body {
-        font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    } */
-    .tp-section-sub::before {
-        background: var(--color-primary) !important;
-    }
-
+/* body {
+    font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+} */
+.tp-section-sub::before {
+    background: var(--color-primary) !important;
 }
 
 .cookie-consent-accept {
