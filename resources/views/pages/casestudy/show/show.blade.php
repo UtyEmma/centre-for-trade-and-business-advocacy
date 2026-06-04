@@ -15,7 +15,7 @@
     <div class="tp-case-studies-details-ptb tp-sec-ptb pt-110 pb-110">
         <div class="container col-md-10 mx-auto">
             <div class="row g-5">
-                <div class="col-lg-8">
+                <div class="col-lg-8 mx-auto">
                     @if ($caseStudy->image)
                         <div class="tp-case-studies-details-ii-wrap mb-50">
                             <div class="tp-case-studies-details-ii-right mb-30">
@@ -31,9 +31,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <x-partials::case-studies.sidebar :caseStudy="$caseStudy" />
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
