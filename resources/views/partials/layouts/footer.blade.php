@@ -129,10 +129,10 @@
                      </div>
                   </div>
                   <div class="order-first order-md-last">
-                     <div class="tp-footer-copyright-link flex gap-5! justify-content-center justify-content-md-end pb-20">
-                        <a href="{{ route('careers') }}">Careers</a>
-                        <a href="{{ route('faqs') }}">Frequently Asked Questions</a>
-                        <a href="#">Privacy policy</a>
+                     <div class="tp-footer-copyright-link flex flex-wrap gap-5! justify-content-center justify-content-md-end pb-20">
+                        <a class="shrink-0" href="{{ route('careers') }}">Careers</a>
+                        <a class="shrink-0" href="{{ route('faqs') }}">Frequently Asked Questions</a>
+                        <a class="shrink-0" href="#">Privacy policy</a>
                      </div>
                   </div>
                </div>
