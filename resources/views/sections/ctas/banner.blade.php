@@ -7,7 +7,7 @@
         'style' => 'primary',
     ]
 ])
-<div class="tp-cn-cta-ptb include-bg tp-sec-ptb pt-140 pb-140" data-background="{{ asset('assets/images/cta/cta-banner-collaboration.png') }}">
+<div class="tp-cn-cta-ptb include-bg tp-sec-ptb pt-140 pb-140 bg-white/40 bg-blend-overlay" data-background="{{ asset('assets/images/cta/cta-banner-collaboration.png') }}">
     <div class="container col-md-10 mx-auto">
         <div class="row">
             <div class="col-lg-7">
