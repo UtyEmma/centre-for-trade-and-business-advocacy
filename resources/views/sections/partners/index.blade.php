@@ -15,8 +15,10 @@
                         <div class="swiper-wrapper">
                             @forelse ($partners as $partner)
                                 <div class="swiper-slide">
-                                    <div class="tp-fi-brand-slider-item">
-                                        <img src="{{ $partner->image }}" class="h-10 object-contain" />
+                                    <div class="tp-fi-brand-slider-item" title="{{ $partner->name }}" >
+                                        <a href="{{ $partner->website_url }}" >
+                                            <img src="{{ $partner->image }}" class="h-10 object-contain" />
+                                        </a>
                                     </div>
                                 </div>
                             @empty
