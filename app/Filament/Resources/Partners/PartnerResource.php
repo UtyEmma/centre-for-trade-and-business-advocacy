@@ -13,8 +13,10 @@ use App\Filament\Resources\Partners\Tables\PartnersTable;
 use App\Filament\Resources\Support\Concerns\HasSoftDeleteResourceBinding;
 use App\Models\Partner;
 use BackedEnum;
+use Filament\Actions\CreateAction;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
+use Filament\Support\Enums\Width;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use UnitEnum;
@@ -45,6 +47,7 @@ class PartnerResource extends Resource
     {
         return PartnersTable::configure($table);
     }
+
 
     public static function getPages(): array
     {

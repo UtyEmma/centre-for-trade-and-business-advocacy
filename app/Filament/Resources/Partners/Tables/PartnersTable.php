@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Partners\Tables;
 
 use App\Filament\Resources\Support\CmsTable;
 use App\Filament\Resources\Support\CmsTableActions;
+use Filament\Actions\CreateAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;

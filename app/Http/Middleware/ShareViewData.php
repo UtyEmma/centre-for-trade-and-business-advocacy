@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\Faq;
+use App\Models\Partner;
 use App\Models\PublicationType;
 use App\Models\Service;
 use App\Support\Seo;
@@ -41,6 +42,7 @@ class ShareViewData
         $this->factory->share('sitePhoneHref', Site::phoneHref($siteSettings));
         $this->factory->share('siteHeaderScripts', $siteSettings->header_scripts);
         $this->factory->share('siteFooterScripts', $siteSettings->footer_scripts);
+        $this->factory->share('partners', Partner::all());
 
         return $next($request);
     }

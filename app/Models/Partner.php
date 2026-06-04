@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Concerns\IsPublishable;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -24,7 +25,7 @@ use Spatie\Sluggable\SlugOptions;
 ])]
 class Partner extends Model implements HasMedia
 {
-    use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes;
+    use HasFactory, HasSlug, InteractsWithMedia, SoftDeletes, IsPublishable;
 
     protected function casts(): array
     {
@@ -55,5 +56,9 @@ class Partner extends Model implements HasMedia
     public function partnerType(): BelongsTo
     {
         return $this->belongsTo(PartnerType::class);
+    }
+
+    function getImageAttribute(){
+        return $this->getFirstMediaUrl('logo');
     }
 }

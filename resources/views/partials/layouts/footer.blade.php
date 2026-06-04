@@ -1,10 +1,6 @@
-<x-sections::ctas.banner  />
+<x-sections::partners />
 
-{{-- <div class="tp-fa-cta-ptb">
-   <div class="tp-fa-cta-thumb">
-      <img src="{{ asset('assets/img/advisory/cta/thumb.jpg') }}" alt="">
-   </div>
-</div> --}}
+<x-sections::ctas.banner  />
 
 <footer>
    <div class="tp-footer-2-area tp-footer-2-style fix z-index-1 pt-100" data-bg-color="#01373D">

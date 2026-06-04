@@ -25,8 +25,8 @@ final class PartnerForm
                             ->url()
                             ->maxLength(255)
                             ->columnSpanFull(),
-                        RichEditor::make('description')
-                            ->columnSpanFull(),
+                        // RichEditor::make('description')
+                        //     ->columnSpanFull(),
                         CmsForm::imageUpload('logo', 'Logo'),
                     ])
                     ->columns(2)
