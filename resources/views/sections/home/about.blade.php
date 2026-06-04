@@ -33,7 +33,7 @@
                 <div class="tp-fi-about-content mb-30">
                     <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
                     <h3 class="tp-section-title mb-30" data-text-split data-letters-fade-in>{{$headline}}</h3>
-                    <div class="tp-fade-anim [&>p]:last:mb-[45px]! [&>p]:mb-5! leading-normal" data-delay=".5">
+                    <div class="tp-fade-anim [&>p]:last:mb-[45px]! [&>p]:mb-5! [&>*]:text-gray-600! leading-normal" data-delay=".5">
                         {!! $content !!}
                     </div>
                     <div class="tp-fi-about-btn-wrap tp-fade-anim" data-delay=".7">

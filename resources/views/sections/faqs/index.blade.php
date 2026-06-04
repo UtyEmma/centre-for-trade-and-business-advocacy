@@ -20,7 +20,7 @@
                 <div class="tp-fi-faq-wrapper mb-30">
                     <div class="tp-fi-faq-heading mb-60">
                         <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
-                        <h3 class="tp-section-title" data-text-split data-letters-fade-in>{{$headline}}
+                        <h3 class="tp-section-title max-md:text-3xl!" data-text-split data-letters-fade-in>{{$headline}}
                         </h3>
                     </div>
                     <div class="tp-faq-wrap tp-fade-anim" data-delay=".5">

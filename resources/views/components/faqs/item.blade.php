@@ -9,9 +9,9 @@
         <div id="collapse-{{ $loop->index }}" class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}"
             data-bs-parent="#{{ $id }}">
             <div class="accordion-body">
-                <p>
+                <div class="mb-0! [&>*]:text-gray-600! leading-normal">
                     {!! $faq->answer !!}
-                </p>
+                </div>
             </div>
         </div>
     </div>

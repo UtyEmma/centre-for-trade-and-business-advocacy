@@ -22,7 +22,7 @@
          <div class="tp-footer-widget-wrap">
             <div class="row">
                <div class="col-xl-3 col-md-6 col-sm-6">
-                  <div class="tp-footer-widget footer-col-6-1 mb-90">
+                  <div class="tp-footer-widget footer-col-6-1 md:mb-[90px]! mb-10!">
                      <div class="tp-footer-logo mb-35">
                         <a href="{{ route('home') }}">
                            <img loading="lazy" data-width="130" src="{{ $siteFooterLogoUrl ?? $siteLogoUrl ?? asset('assets/img/logo/citrus-logo-white.png') }}" alt="{{ $siteSettings->site_name ?? config('app.name') }}">
@@ -45,45 +45,72 @@
                   </div>
                </div>
                <div class="col-xl-3 col-md-6 col-sm-6">
-                  <div class="tp-footer-widget mb-90">
+                  <div class="tp-footer-widget md:mb-[90px]! mb-10!">
                      <h4 class="tp-footer-widget-title">QUICK LINKS</h4>
                      <div class="tp-footer-widget-menu">
                         <ul>
                            @foreach ($footerQuickLinks ?? [] as $link)
-                              <li><a class="tp-line-anim" href="{{ $link['url'] }}">{{ $link['label'] }}</a></li>
+                              <li>
+                                 <a class="tp-line-anim flex! gap-3! items-center" href="{{ $link['url'] }}">
+                                    <span>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                          <path d="M0.75 4.75H8.75M8.75 4.75L2.75 0.75M8.75 4.75L2.75 8.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                       </svg>
+                                    </span>
+                                    <div>
+                                       {{ $link['label'] }}
+                                    </div>
+                                 </a>
+                              </li>
                            @endforeach
                         </ul>
                      </div>
                   </div>
                </div>
                <div class="col-xl-3 col-md-6 col-sm-6">
-                  <div class="tp-footer-widget mb-90">
+                  <div class="tp-footer-widget md:mb-[90px]! mb-10!">
                      <h4 class="tp-footer-widget-title">Our Services</h4>
                      <div class="tp-footer-widget-menu">
                         <ul>
                            @foreach ($footerServices ?? [] as $service)
-                              <li><a class="tp-line-anim" href="{{ route('services.show', $service) }}">{{ $service->title }}</a></li>
+                              <li>
+                                 <a class="tp-line-anim flex! gap-3! items-center" href="{{ route('services.show', $service) }}">
+                                    <span>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                          <path d="M0.75 4.75H8.75M8.75 4.75L2.75 0.75M8.75 4.75L2.75 8.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                       </svg>
+                                    </span>
+                                    <div>
+                                       {{ $service->title }}
+                                    </div>
+                                 </a>
+                              </li>
                            @endforeach
                         </ul>
                      </div>
                   </div>
                </div>
                <div class="col-xl-3 col-md-4 col-sm-6">
-                  <div class="tp-footer-widget mb-60">
+                  <div class="tp-footer-widget md:mb-[90px]! mb-5!">
                      <h4 class="tp-footer-widget-title">Contact Us</h4>
                      <div class="tp-footer-contact-wrap">
                         @if (filled($siteSettings->address ?? null))
-                           <span class="tp-footer-contact-location">
+                           <span class="tp-footer-contact-location mb-2!">
                               <a href="{{ route('contact') }}">{{ $siteSettings->address }}</a>
                            </span>
                         @endif
-                        <h4 class="tp-footer-widget-title">Contact Us</h4>
-                        @if (filled($siteSettings->phone ?? null) && filled($sitePhoneHref ?? null))
-                           <a class="tp-footer-contact-tel d-inline-block mb-20 tp-line-anim" href="{{ $sitePhoneHref }}">Tel. {{ $siteSettings->phone }}</a>
-                        @endif
-                        @if (filled($siteSettings->email ?? null) && filled($siteEmailHref ?? null))
-                           <a class="tp-footer-contact-tel d-inline-block mb-35 tp-line-anim" href="{{ $siteEmailHref }}">{{ $siteSettings->email }}</a>
-                        @endif
+
+                        <div>
+                           @if (filled($siteSettings->phone ?? null) && filled($sitePhoneHref ?? null))
+                              <a class="tp-footer-contact-tel d-inline-block mb-20 tp-line-anim" href="{{ $sitePhoneHref }}">Tel. {{ $siteSettings->phone }}</a>
+                           @endif
+                        </div>
+
+                        <div>
+                           @if (filled($siteSettings->email ?? null) && filled($siteEmailHref ?? null))
+                              <a class="tp-footer-contact-tel d-inline-block mb-35 tp-line-anim" href="{{ $siteEmailHref }}">{{ $siteSettings->email }}</a>
+                           @endif
+                        </div>
                         {{-- <img src="{{ asset('assets/img/finance/cta/footer-map-2.png') }}" alt=""> --}}
                      </div>
                   </div>
@@ -95,13 +122,13 @@
       <div class="tp-footer-copyright-area">
          <div class="container col-md-10 mx-auto">
             <div class="tp-footer-copyright-border pt-30 pb-10">
-               <div class="flex justify-between align-items-center">
+               <div class="flex max-md:flex-col! justify-between align-items-center">
                   <div class="">
                      <div class="tp-footer-copyright-text text-center text-md-start pb-20">
                         <p class="mb-0">{{ $siteCopyrightText ?? \App\Support\Site::copyright() }}</p>
                      </div>
                   </div>
-                  <div class="">
+                  <div class="order-first order-md-last">
                      <div class="tp-footer-copyright-link flex gap-5! justify-content-center justify-content-md-end pb-20">
                         <a href="{{ route('careers') }}">Careers</a>
                         <a href="{{ route('faqs') }}">Frequently Asked Questions</a>

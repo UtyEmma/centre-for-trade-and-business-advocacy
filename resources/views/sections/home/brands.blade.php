@@ -18,7 +18,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="tp-fi-brand-top text-center pb-70">
-                        <h3 class="tp-section-title mb-20" data-text-split data-letters-fade-in>{{$headline}}</h3>
+                        <h3 class="tp-section-title mb-20 max-md:text-3xl!" data-text-split data-letters-fade-in>{{$headline}}</h3>
                         <div class="tp-fade-anim" data-delay=".3">
                             <a class="tp-btn-underline text-primary!" href="{{ $cta['url'] }}">{{ $cta['label'] }}</a>
                         </div>

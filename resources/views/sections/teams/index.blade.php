@@ -12,7 +12,7 @@
                     <div class="col-lg-6">
                         <div class="tp-cc-team-heading mb-60">
                             <span class="tp-cc-section-sub tp-fade-anim text-primary!">{{ $label }}</span>
-                            <h3 class="tp-section-title advisory-color" data-text-split data-letters-fade-in>{{$headline}}</h3>
+                            <h3 class="tp-section-title advisory-color max-md:text-3xl!" data-text-split data-letters-fade-in>{{$headline}}</h3>
                         </div>
                     </div>
                     <div class="col-lg-6">
