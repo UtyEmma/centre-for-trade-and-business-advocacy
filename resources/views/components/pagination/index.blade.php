@@ -5,7 +5,7 @@
 ])
 
 @php
-    $elements = \Illuminate\Pagination\UrlWindow::make($paginator)->get();
+    $elements = $paginator;
     $controlClasses = 'inline-flex min-h-10 min-w-10 items-center justify-center rounded border border-gray-200 bg-white px-3 text-sm font-medium text-gray-700 transition hover:border-primary hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary/30';
     $disabledClasses = 'inline-flex min-h-10 min-w-10 cursor-not-allowed items-center justify-center rounded border border-gray-200 bg-gray-50 px-3 text-sm font-medium text-gray-400';
     $activeClasses = 'inline-flex min-h-10 min-w-10 items-center justify-center rounded border border-primary bg-primary px-3 text-sm font-semibold text-white';
@@ -22,15 +22,15 @@
 @endphp
 
 @if ($paginator->hasPages())
-    <nav {{ $attributes->class('mt-10 flex flex-col items-center justify-between gap-4 md:flex-row') }} role="navigation" aria-label="{{ __('Pagination Navigation') }}">
+    <nav {{ $attributes->class('my-10! flex flex-col items-center justify-between gap-4 md:flex-row') }} role="navigation" aria-label="{{ __('Pagination Navigation') }}">
         @if ($showSummary)
             <p class="text-sm text-gray-600">
                 {{ __('Showing') }}
-                <span class="font-semibold text-gray-900">{{ $summaryFirstItem }}</span>
+                <span class="font-medium text-secondary">{{ $summaryFirstItem }}</span>
                 {{ __('to') }}
-                <span class="font-semibold text-gray-900">{{ $summaryLastItem }}</span>
+                <span class="font-medium text-secondary">{{ $summaryLastItem }}</span>
                 {{ __('of') }}
-                <span class="font-semibold text-gray-900">{{ $paginator->total() }}</span>
+                <span class="font-medium text-secondary">{{ $paginator->total() }}</span>
                 {{ __('results') }}
             </p>
         @endif

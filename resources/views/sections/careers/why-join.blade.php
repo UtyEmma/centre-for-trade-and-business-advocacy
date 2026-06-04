@@ -16,12 +16,12 @@
                 <div class="col-lg-7">
                     <div class="tp-career-heading mb-30">
                         <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
-                        <h3 class="tp-section-title" data-text-split data-letters-fade-in>{{$headline}}</h3>
+                        <h3 class="tp-section-title max-md:text-3xl!" data-text-split data-letters-fade-in>{{$headline}}</h3>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="tp-career-text mb-30 tp-fade-anim" data-delay=".5">
-                        <p>{{ $description }}</p>
+                        <p  class="[&>p]:text-gray-600!">{{ $description }}</p>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<div class="tp-fa-control-ptb tp-cc-control-style tp-sec-ptb pt-100 pb-90" data-bg-color="#F7F7F5">
+<div class="tp-fa-control-ptb tp-cc-control-style tp-sec-ptb pt-70 pb-90" data-bg-color="#F7F7F5">
     <div class="tp-fa-control-bottom mt-0!">
         <div class="container col-md-10 mx-auto">
             <div class="row">

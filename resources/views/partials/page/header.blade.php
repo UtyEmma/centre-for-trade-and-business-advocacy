@@ -45,7 +45,7 @@
                             @endif
                         @endforeach
                     </ul>
-                    <h2 class="tp-breadcrumb-title md:text-5xl! leading-tight! text-white!">{{$title}}</h2>
+                    <h2 class="tp-breadcrumb-title text-3xl! md:text-5xl! leading-tight! text-white!">{{$title}}</h2>
                     <p class="text-white md:text-base">{{ $description }}</p>
                 </div>
             </div>

@@ -28,7 +28,7 @@
                     <div class="tp-fi-value-heading">
                         <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
                         <h3 class="tp-section-title mb-30" data-text-split data-letters-fade-in>{{$headline}}</h3>
-                        <div class="tp-fade-anim" data-delay=".5">
+                        <div class="tp-fade-anim  [&>p]:text-gray-600!" data-delay=".5">
                             {!! $content !!}
                         </div>
                     </div>

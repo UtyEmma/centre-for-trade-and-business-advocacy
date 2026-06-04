@@ -26,7 +26,7 @@
                         </div>
                         <div class="tp-about-vision-item-content">
                             <h4 class="tp-about-vision-item-title font-semibold!">Our Vision</h4>
-                            <p>{{$vision}}</p>
+                            <p class="[&>p]:text-gray-600!">{{$vision}}</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="tp-about-vision-item-content">
                             <h4 class="tp-about-vision-item-title font-semibold!">Our Mission</h4>
-                            <p>{{$mission}}</p>
+                            <p  class="[&>p]:text-gray-600!">{{$mission}}</p>
                         </div>
                     </div>
                 </div>

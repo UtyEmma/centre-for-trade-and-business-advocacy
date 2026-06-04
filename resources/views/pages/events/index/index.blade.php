@@ -2,11 +2,11 @@
 
     <x-partials::page.header 
         title="Our Events"
-        description="Discover our upcoming events, workshops, and webinars designed to empower your business with the latest insights and strategies in consulting, finance, and marketing. Join us to connect with industry experts and elevate your business success."
+        description="Discover our upcoming events, workshops, and webinars designed to empower your business with the latest insights and strategies in consulting, finance, and marketing."
         image="{{ asset('assets/images/banners/events-page-banner.png') }}"
     />
 
-    <div class="tp-blog-area pt-100 pb-100">
+    <div class="tp-blog-area pt-100 max-md:pt-10! pb-100">
         <div class="container col-md-10 mx-auto">
             <div class="row">
                 <div class="col-lg-8">
@@ -26,8 +26,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <div class="tp-sidebar-wrapper mb-30">
+                <div class="col-lg-4 order-first order-lg-last">
+                    <div class="tp-sidebar-wrapper md:mb-30">
                         <div class="tp-sidebar-widget mb-45">
                             <div class="tp-sidebar-search">
                                 <form action="#">

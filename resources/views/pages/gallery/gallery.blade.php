@@ -48,11 +48,9 @@
                         />
                     @endforeach
                 </div>
-                {{-- </div> --}}
             @else
-                <div class="rounded-lg border border-dashed border-secondary/20 p-5! text-center md:p-10!">
-                    <h3 class="mb-2.5 text-[28px] font-extrabold text-secondary">No gallery items yet</h3>
-                    <p class="m-0 text-[#222f30]/70">Please check back later.</p>
+                <div class="text-center mt-10">
+                    <p class="m-0 text-[#222f30]/70">No gallery items yet. Please check back later.</p>
                 </div>
             @endif
         </div>

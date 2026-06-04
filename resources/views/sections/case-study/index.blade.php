@@ -10,7 +10,7 @@
             <div class="col-lg-12">
                 <div class="tp-fi-service-heading text-center mb-60">
                 <span class="tp-section-sub tp-fade-anim">{{ $title }}</span>
-                <h3 class="tp-section-title" data-text-split data-letters-fade-in>{{$headline}}</h3>
+                <h3 class="tp-section-title max-md:text-3xl!" data-text-split data-letters-fade-in>{{$headline}}</h3>
                 </div>
             </div>
         </div>
@@ -41,4 +41,6 @@
             @endforelse
         </div>
     </div>
+
+    <x-pagination :paginator="$casestudies" />
 </div>

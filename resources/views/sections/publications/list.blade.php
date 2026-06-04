@@ -4,11 +4,9 @@
 ])
 
 @forelse ($publications as $publication)
-    <div>
-        <x-publications.item :type="$type" :publication="$publication" />
-    </div>
+    <x-publications.item :type="$type" :publication="$publication" />
 @empty
-    <div>
+    <div class="text-center mt-10">
         <p>There is nothing here yet. Please check back later.</p>
     </div>
 @endforelse

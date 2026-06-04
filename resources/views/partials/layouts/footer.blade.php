@@ -108,7 +108,7 @@
 
                         <div>
                            @if (filled($siteSettings->email ?? null) && filled($siteEmailHref ?? null))
-                              <a class="tp-footer-contact-tel d-inline-block mb-35 tp-line-anim" href="{{ $siteEmailHref }}">{{ $siteSettings->email }}</a>
+                              <a class="tp-footer-contact-tel d-inline-block mb-35 tp-line-anim" href="{{ $siteEmailHref }}">Mail. {{ $siteSettings->email }}</a>
                            @endif
                         </div>
                         {{-- <img src="{{ asset('assets/img/finance/cta/footer-map-2.png') }}" alt=""> --}}

@@ -5,7 +5,7 @@
         :breadcrumbs="[
             ['name' => 'Meet Our Team'],
         ]" 
-        image="{{ asset('assets/images/banners/teams-banner.png') }}"
+        image="{{ asset('assets/images/banners/teams-page-banner.png') }}"
     />
 
     <x-sections::teams.area 

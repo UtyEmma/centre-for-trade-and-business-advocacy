@@ -63,6 +63,11 @@ new class extends Component
 ?>
 
 <div class="tp-contact-from mb-30 tp-fade-anim" data-delay=".5" data-fade-from="right">
+    <div class="tp-contact-heading mb-10!">
+        <h3 class="tp-section-title max-md:text-2xl! text-4xl!" data-text-split data-letters-fade-in>Send us a message</h3>
+        <p class="text-gray-600!">Share your enquiry, partnership request, or policy-related message with us. We will review it and respond as soon as possible.</p>
+    </div>
+
     <form wire:submit="submit">
         <div class="row">
             <div class="col-12">

@@ -26,7 +26,7 @@
                         <div class="tp-fi-about-content pb-50">
                             <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
                             <h3 class="tp-section-title mb-20" data-text-split data-letters-fade-in>{{ $headline }}</h3>
-                            <div class="tp-fade-anim flex flex-col gap-3" data-delay=".5">
+                            <div class="tp-fade-anim flex flex-col gap-3 [&>p]:text-gray-600!" data-delay=".5">
                                 {!! $content !!}
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                     @forelse ($stats as $stat)
                                         <div class="tp-about-fact-item">
                                             <h3 class="tp-about-fact-item-title">{{$stat['stat']}}</h3>
-                                            <p>{{ $stat['label'] }}</p>
+                                            <p class="[&>p]:text-gray-600!">{{ $stat['label'] }}</p>
                                         </div>
                                     @empty
                                     @endforelse

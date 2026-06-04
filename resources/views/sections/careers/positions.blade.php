@@ -7,7 +7,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="tp-career-role-heading mb-50 text-center col-md-10 mx-auto">
-                        <h3 class="tp-section-title text-white" data-text-split data-letters-fade-in>Explore our open roles and join a team that’s driving innovation and success.</h3>
+                        <h3 class="tp-section-title max-md:text-3xl! text-white" data-text-split data-letters-fade-in>Explore our open roles and join a team that’s driving innovation and success.</h3>
                     </div>
                     <div class="tp-career-role-wrapper tp-fade-anim" data-delay=".5">
                         @forelse ($jobs as $job)                        

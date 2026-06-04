@@ -17,7 +17,7 @@
                             @endif
                             
                             @if ($headline)
-                                <h3 class="tp-section-title md:w-2/3" data-text-split data-letters-fade-in>{{$headline}}
+                                <h3 class="tp-section-title max-md:text-3xl! md:w-2/3" data-text-split data-letters-fade-in>{{$headline}}
                                 </h3>
                             @endif
                         </div>
