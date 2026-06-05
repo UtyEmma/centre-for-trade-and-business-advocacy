@@ -20,7 +20,7 @@
                 <p>{{$summary}}</p>
             </div>
             <div class="tp-at-download-item-btn ">
-                <a href="{{ $url }}" target="__blank" class="tp-at-download-btn text-primary!">
+                <a href="{{ $url }}" target="_blank" class="tp-at-download-btn text-primary!">
                     {{ $button_text }} <x-phosphor-download-simple class="size-5" />
                 </a>
             </div>
