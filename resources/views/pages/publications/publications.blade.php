@@ -11,7 +11,7 @@
     <div class="tp-worksheet-ptb tp-worksheet-style tp-sec-ptb md:pt-[100px]! pb-115">
         <div class="container col-md-10 mx-auto">
             <div class="row g-5">
-                <div class="col-md-8">
+                <div class="col-md-8 flex flex-col gap-4">
                     <x-sections::publications.list 
                         :publications="$this->publications"
                         :type="$publicationType"

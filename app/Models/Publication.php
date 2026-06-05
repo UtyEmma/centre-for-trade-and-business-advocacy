@@ -85,6 +85,6 @@ class Publication extends Model implements HasMedia
 
     function getDocumentUrlAttribute(){
         if($this->document) return $this->document;
-        return $this->url;
+        return $this->external_url;
     }
 }
