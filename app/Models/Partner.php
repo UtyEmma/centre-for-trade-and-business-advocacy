@@ -6,7 +6,6 @@ use App\Concerns\IsPublishable;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -14,7 +13,6 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 #[Fillable([
-    'partner_type_id',
     'name',
     'slug',
     'website_url',
@@ -51,11 +49,6 @@ class Partner extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('logo')->singleFile();
-    }
-
-    public function partnerType(): BelongsTo
-    {
-        return $this->belongsTo(PartnerType::class);
     }
 
     function getImageAttribute(){

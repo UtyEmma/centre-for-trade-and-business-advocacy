@@ -54,7 +54,7 @@
                             <div class="tp-cn-hero-content col-md-10 d-flex justify-content-between align-items-center tp-fade-anim"
                                 data-delay=".6">
                                 <div class="tp-fi-hero-sub">
-                                    <span>
+                                    <span class="max-md:hidden!">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38"
                                             viewBox="0 0 38 38" fill="none">
                                             <path d="M37 37.7V0.699951H0" stroke="currentColor" stroke-width="1.4">

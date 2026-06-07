@@ -27,10 +27,6 @@ final class PartnersTable
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('partnerType.name')
-                    ->label('Type')
-                    ->searchable()
-                    ->sortable(),
                 TextColumn::make('website_url')
                     ->label('Website')
                     ->searchable()
@@ -46,11 +42,6 @@ final class PartnersTable
                     ->boolean(),
             ])
             ->filters([
-                SelectFilter::make('partner_type_id')
-                    ->label('Type')
-                    ->relationship('partnerType', 'name')
-                    ->searchable()
-                    ->preload(),
                 TernaryFilter::make('is_featured')
                     ->label('Featured'),
                 TernaryFilter::make('is_published')

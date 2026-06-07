@@ -10,7 +10,6 @@ return new class extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('partner_type_id')->constrained()->restrictOnDelete();
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('website_url')->nullable();
