@@ -76,7 +76,6 @@
                                             <x-button as="a" :variant="$button['type']" href="{{ $button['url'] }}">{{$button['label']}}</x-button>
                                         </div>
                                     @empty
-                                        
                                     @endforelse
                                 </div>
 

@@ -1,5 +1,5 @@
 @props([
-    'headline' => 'We are advancing trade and business reform through evidence, institutions, and stakeholder trust',
+    'headline' => 'We are advancing trade and business environment reform through evidence, institutions, and stakeholder trust',
     'cta' => [
         'label' => 'See how we work',
         'url' => route('about'),

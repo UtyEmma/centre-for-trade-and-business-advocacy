@@ -8,12 +8,12 @@
             'buttons' => [
                 [
                     'label' => 'Explore Our Work',
-                    'url' => '/what-we-do',
+                    'url' => route('services'),
                     'type' => 'primary',
                 ],
                 [
                     'label' => 'Learn More',
-                    'url' => '/who-we-are',
+                    'url' => route('about'),
                     'type' => 'secondary',
                 ],
             ],
@@ -37,13 +37,13 @@
             'description' => 'We support development-oriented reforms across trade, competition, consumer protection, digital governance, sustainability, and public-sector accountability.',
             'buttons' => [
                 [
-                    'label' => 'View Programme Areas',
-                    'url' => '/what-we-do',
+                    'label' => 'Our Programme Areas',
+                    'url' => route('services'),
                     'type' => 'primary',
                 ],
                 [
                     'label' => 'Read Our Publications',
-                    'url' => '/publications',
+                    'url' => route('publications', 'reports'),
                     'type' => 'secondary',
                 ],
             ],
@@ -68,12 +68,12 @@
             'buttons' => [
                 [
                     'label' => 'How We Work',
-                    'url' => '/how-we-work',
+                    'url' => route('about'),
                     'type' => 'primary',
                 ],
                 [
                     'label' => 'Partner With Us',
-                    'url' => '/contact',
+                    'url' => route('contact'),
                     'type' => 'secondary',
                 ],
             ],

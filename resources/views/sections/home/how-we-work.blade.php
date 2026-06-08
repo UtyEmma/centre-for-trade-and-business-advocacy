@@ -31,7 +31,7 @@
             <div class="col-lg-12">
                 <div class="tp-about-vision-content mb-55">
                 <span class="tp-section-sub tp-fade-anim">{{ $label }}</span>
-                <h3 class="tp-section-title md:w-2/3 max-md:text-2xl! fs-32 mb-20" data-text-split data-letters-fade-in>{{ $headline }}</h3>
+                <h3 class="tp-section-title md:w-2/3 max-md:text-3xl! mb-20" data-text-split data-letters-fade-in>{{ $headline }}</h3>
                 </div>
             </div>
         </div>
